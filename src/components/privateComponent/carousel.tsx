@@ -1,0 +1,61 @@
+import React, { useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react"
+import Autoplay from "embla-carousel-autoplay"
+import ArrowDark from "@/assets/CarouselArrow - D.svg?react"
+import ArrowLight from "@/assets/CarouselArrow - L.svg?react"
+import useMode from "@/context/mode";
+const Carousel = ({ children }: {children:React.ReactNode}) => {
+	const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+
+	const scrollPrev = useCallback(() => {
+		if (emblaApi) emblaApi.scrollPrev()
+	}, [emblaApi])
+	const scrollNext = useCallback(() => {
+		if (emblaApi) emblaApi.scrollNext()
+	}, [emblaApi]);
+
+	const currentMode = useMode((state) => state.mode);
+
+  	return (    
+		<div className="embla overflow-hidden" ref={emblaRef}>
+			<div className="embla__container flex gap-8">
+				{React.Children.map(children, (child, index) => {
+			// Ensure the child is a valid React element before cloning
+					if (React.isValidElement(child)) {
+					return (
+						<div className="embla__slide flex-1" key={index}>
+							{ React.cloneElement(child) }
+						</div>
+					)}
+					return child; // Return non-element children (like strings or numbers) as is
+				})}
+			</div>
+				{ currentMode === "dark" ? (
+					<div className="flex flex-row justify-between">
+						<ArrowDark
+							onClick={scrollPrev}
+							className="embla__prev" 
+						/>
+						<ArrowDark
+							onClick={scrollNext}
+							className="embla__next" 
+						/>
+					</div>
+					
+				) : (
+					<div className="flex flex-row justify-between">
+						<ArrowLight
+							onClick={scrollPrev}
+							className="embla__prev" 
+						/>
+						<ArrowLight
+							onClick={scrollNext}
+							className="embla__next" 
+						/>
+					</div>
+				)}
+		</div>
+	);
+};
+
+export default Carousel;
