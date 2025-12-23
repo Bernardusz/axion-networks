@@ -20,7 +20,7 @@ Photo by [Taylor Vick](https://unsplash.com/@tvick?utm_source=unsplash&utm_mediu
 
 Gambar oleh <a href="https://pixabay.com/id/users/geralt-9301/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8994400">Gerd Altmann</a> dari <a href="https://pixabay.com/id//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8994400">Pixabay</a>
 Photo by [Krzysztof Kowalik](https://unsplash.com/@kowalikus?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/a-wall-that-has-a-bunch-of-lights-on-it-KiH2-tdGQRY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-      
+
 Photo by Josh Sorenson: https://www.pexels.com/photo/ethernet-cables-plugged-on-a-server-rack-1054397/
 Photo by [Scott Rodgerson](https://unsplash.com/@scottrodgerson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/a-bunch-of-blue-wires-connected-to-each-other-PSpf_XgOM5w?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 Photo by [Matthieu Beaumont](https://unsplash.com/@matthieu_cabri?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/a-very-large-array-of-electronic-equipment-in-a-room-iYnpYeyu57k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

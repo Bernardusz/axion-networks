@@ -9,7 +9,7 @@ const head = createHead();
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <UnheadProvider head={head}>
-			<App />
+            <App />
         </UnheadProvider>
     </StrictMode>
 );

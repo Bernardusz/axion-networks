@@ -42,7 +42,7 @@
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-ring: var(--sidebar-ring);
-	--font-primary: "Inter", sans-serif;
+    --font-primary: "Inter", sans-serif;
 }
 
 :root {
@@ -78,8 +78,8 @@
     --sidebar-accent-foreground: oklch(0.205 0 0);
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
-	font-size: clamp(8px, 0.7vw + 0.5rem, 16px);
-	overflow-x: hidden;
+    font-size: clamp(8px, 0.7vw + 0.5rem, 16px);
+    overflow-x: hidden;
 }
 
 .dark {
@@ -123,41 +123,39 @@
     body {
         @apply bg-background text-foreground;
     }
-	section {
-		@apply p-12
-	}
-	h1 {
-		@apply text-8xl font-extrabold
-	}
-	h2 {
-		@apply text-6xl font-bold
-	}
-	h3 {
-		@apply text-5xl font-semibold
-	}
-	h4{
-		@apply text-4xl font-semibold
-	}
-	p {
-		@apply text-2xl font-medium
-	}
-
+    section {
+        @apply p-12;
+    }
+    h1 {
+        @apply text-8xl font-extrabold;
+    }
+    h2 {
+        @apply text-6xl font-bold;
+    }
+    h3 {
+        @apply text-5xl font-semibold;
+    }
+    h4 {
+        @apply text-4xl font-semibold;
+    }
+    p {
+        @apply text-2xl font-medium;
+    }
 }
 
-@layer components{
-	.page {
-		@apply flex flex-col w-full h-fit
-	}
-	.p-deemphasize {
-		@apply text-xl font-normal
-	}
+@layer components {
+    .page {
+        @apply flex h-fit w-full flex-col;
+    }
+    .p-deemphasize {
+        @apply text-xl font-normal;
+    }
 
-	.link-primary {
-		@apply text-xl font-normal text-primary hover:text-primary/90
-	}
+    .link-primary {
+        @apply text-primary hover:text-primary/90 text-xl font-normal;
+    }
 
-	.btn-primary {
-		@apply w-32 h-16
-	}
+    .btn-primary {
+        @apply min-h-12 min-w-32;
+    }
 }
-

@@ -1,0 +1,44 @@
+import AxionLogo from "@/assets/Axion Icon.svg?react";
+import { Link } from "react-router-dom";
+const Footer = () => {
+	return (
+		<div className="w-full h-140 flex flex-col pt-8 px-4 gap-6">
+			<AxionLogo className="pl-8 aspect-square h-32 w-32"/>
+			<div className="justify-between grid grid-cols-2 xl:grid-cols-3 px-8 gap-8">
+				<div className="flex flex-col gap-4">
+					<h4>Pricing</h4>
+					<nav>
+						<ul className="flex flex-col gap-1">
+							<li><Link className="link-primary text-3xl" to="/">Begginer</Link></li>
+							<li><Link className="link-primary text-3xl" to="/">Advanced</Link></li>
+							<li><Link className="link-primary text-3xl" to="/">Professional</Link></li>
+							<li><Link className="link-primary text-3xl" to="/">Enterprise</Link></li>
+						</ul>
+					</nav>
+				</div>
+				<div className="flex flex-col gap-4">
+					<h4>Products</h4>
+					<nav>
+						<ul className="flex flex-col gap-1">
+							<li><Link className="link-primary text-3xl" to="/">GID</Link></li>
+							<li><Link className="link-primary text-3xl" to="/">cPanel</Link></li>
+							<li><Link className="link-primary text-3xl" to="/">VPS</Link></li>
+						</ul>
+					</nav>
+				</div>
+				<div className="flex flex-col gap-4">
+					<h4>Get Started</h4>
+					<nav>
+						<ul className="flex flex-col gap-1">
+							<li><Link className="link-primary text-3xl" to="/">Login</Link></li>
+							<li><Link className="link-primary text-3xl" to="/">Signup</Link></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div></div>
+		</div>
+	);
+};
+
+export default Footer;
