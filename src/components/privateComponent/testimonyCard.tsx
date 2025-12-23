@@ -16,9 +16,9 @@ const TestimonyCard = ({
     role,
 }: testimonyCardProps) => {
     return (
-        <div className="bg-card flex h-fit w-120 flex-col justify-start gap-4 rounded-xl">
-            <p className="p-8 text-justify text-2xl">{text}</p>
-            <div className="flex flex-row items-center justify-start gap-2 px-4">
+        <div className="bg-card flex h-fit w-120 flex-col justify-start gap-4 rounded-xl pb-6 transition-transform duration-300 hover:scale-110">
+            <p className="p-10 text-justify text-2xl">{text}</p>
+            <div className="flex flex-row items-center justify-start gap-2 px-8">
                 <Avatar className="h-12 w-12">
                     <AvatarImage src={imageSrc} alt={imageAlt} />
                     <AvatarFallback>CN</AvatarFallback>

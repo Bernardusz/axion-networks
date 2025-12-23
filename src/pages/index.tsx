@@ -8,6 +8,7 @@ import CallToAction from "@/components/staticComponent/callToAction";
 import { AccordionContent, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionItem } from "@radix-ui/react-accordion";
+import { NavLink } from "react-router-dom";
 
 const HomePage = () => {
     // const toggleMode = useMode((state) => state.toggleMode)
@@ -70,24 +71,36 @@ const HomePage = () => {
                     imageAlt="an img"
                     title="Git Integrated Development"
                     text="Immediately deploy your app as soon as it’s finished. No worries about config, Nginx, Linux or Reverse Proxies. Everything is handled for you"
-                    to="/products"
-                    linkText="Learn More ->"
+                    action={
+                        <NavLink to="/products" className="link-primary">
+                            Learn More
+                        </NavLink>
+                    }
+                    type="flex-col"
                 />
                 <MainCard
                     imageSrc="/images/abstract-cybersecurity-concept-design.jpg"
                     imageAlt="an img"
                     title="Git Integrated Development"
                     text="Immediately deploy your app as soon as it’s finished. No worries about config, Nginx, Linux or Reverse Proxies. Everything is handled for you"
-                    to="/products"
-                    linkText="Learn More ->"
+                    action={
+                        <NavLink to="/products" className="link-primary">
+                            Learn More
+                        </NavLink>
+                    }
+                    type="flex-col"
                 />
                 <MainCard
                     imageSrc="/images/abstract-cybersecurity-concept-design.jpg"
                     imageAlt="an img"
                     title="Git Integrated Development"
                     text="Immediately deploy your app as soon as it’s finished. No worries about config, Nginx, Linux or Reverse Proxies. Everything is handled for you"
-                    to="/products"
-                    linkText="Learn More ->"
+                    action={
+                        <NavLink to="/products" className="link-primary">
+                            Learn More
+                        </NavLink>
+                    }
+                    type="flex-col"
                 />
             </FlexSection>
             <section className="section">
@@ -100,26 +113,38 @@ const HomePage = () => {
                 <ReverseCard
                     title="Security First"
                     text="Extensive security and Firewall are set up to make sure your apps and products are safe. No compromise guaranteed."
-                    to="/products"
-                    linkText="Learn More ->"
                     imageSrc="/images/abstract-cybersecurity-concept-design.jpg"
                     imageAlt="an img"
+                    action={
+                        <NavLink to="/products" className="link-primary">
+                            Learn More
+                        </NavLink>
+                    }
+                    type="flex-col"
                 />
                 <ReverseCard
                     title="Security First"
                     text="Extensive security and Firewall are set up to make sure your apps and products are safe. No compromise guaranteed."
-                    to="/products"
-                    linkText="Learn More ->"
                     imageSrc="/images/abstract-cybersecurity-concept-design.jpg"
                     imageAlt="an img"
+                    action={
+                        <NavLink to="/products" className="link-primary">
+                            Learn More
+                        </NavLink>
+                    }
+                    type="flex-col"
                 />
                 <ReverseCard
                     title="Security First"
                     text="Extensive security and Firewall are set up to make sure your apps and products are safe. No compromise guaranteed."
-                    to="/products"
-                    linkText="Learn More ->"
                     imageSrc="/images/abstract-cybersecurity-concept-design.jpg"
                     imageAlt="an img"
+                    action={
+                        <NavLink to="/products" className="link-primary">
+                            Learn More
+                        </NavLink>
+                    }
+                    type="flex-col"
                 />
             </FlexSection>
             <section className="section flex flex-col gap-16">

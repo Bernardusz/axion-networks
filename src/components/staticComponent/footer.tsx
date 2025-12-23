@@ -4,11 +4,11 @@ const Footer = () => {
     return (
         <div className="flex h-140 w-full flex-col gap-6 px-4 pt-8">
             <AxionLogo className="aspect-square h-32 w-32 pl-8" />
-            <div className="grid grid-cols-2 justify-between gap-8 px-8 xl:grid-cols-3">
+            <div className="grid grid-cols-2 justify-center gap-8 px-8 xl:grid-cols-3">
                 <div className="flex flex-col gap-4">
                     <h4>Pricing</h4>
                     <nav>
-                        <ul className="flex flex-col gap-1">
+                        <ul className="flex flex-col justify-center gap-1">
                             <li>
                                 <Link className="link-primary text-3xl" to="/">
                                     Begginer
@@ -35,7 +35,7 @@ const Footer = () => {
                 <div className="flex flex-col gap-4">
                     <h4>Products</h4>
                     <nav>
-                        <ul className="flex flex-col gap-1">
+                        <ul className="flex flex-col justify-center gap-1">
                             <li>
                                 <Link className="link-primary text-3xl" to="/">
                                     GID
@@ -57,7 +57,7 @@ const Footer = () => {
                 <div className="flex flex-col gap-4">
                     <h4>Get Started</h4>
                     <nav>
-                        <ul className="flex flex-col gap-1">
+                        <ul className="flex flex-col justify-center gap-1">
                             <li>
                                 <Link className="link-primary text-3xl" to="/">
                                     Login

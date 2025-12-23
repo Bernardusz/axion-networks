@@ -6,39 +6,40 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
-import { NavLink } from "react-router-dom";
 
 type reverseCardProps = {
     imageSrc: string;
     imageAlt: string;
     title: string;
     text: string;
-    to: string;
-    linkText: string;
+    action: React.ReactNode;
+    type: "flex-col" | "flex-row";
 };
 
 const ReverseCard = ({
     title,
     text,
-    to,
-    linkText,
     imageSrc,
     imageAlt,
+    action,
+    type,
+    ...props
 }: reverseCardProps) => {
     return (
-        <Card className="gap-12">
-            <CardHeader className="flex flex-col gap-4">
-                <CardTitle>
-                    <h4>{title}</h4>
-                </CardTitle>
-                <CardDescription>
-                    <p>{text}</p>
-                </CardDescription>
-                <CardAction>
-                    <NavLink to={to} className="link-primary">
-                        {linkText}
-                    </NavLink>
-                </CardAction>
+        <Card
+            {...props}
+            className="gap-12 transition-transform duration-300 hover:scale-[1.03]"
+        >
+            <CardHeader className={`flex ${type} gap-4`}>
+                <div className="flex flex-col gap-4">
+                    <CardTitle>
+                        <h4>{title}</h4>
+                    </CardTitle>
+                    <CardDescription>
+                        <p>{text}</p>
+                    </CardDescription>
+                </div>
+                <CardAction>{action}</CardAction>
             </CardHeader>
             <CardContent>
                 <img src={imageSrc} alt={imageAlt} />
