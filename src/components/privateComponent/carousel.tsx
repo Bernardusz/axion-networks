@@ -17,7 +17,10 @@ const Carousel = ({ children }: { children: React.ReactNode }) => {
     const currentMode = useMode(state => state.mode);
 
     return (
-        <div className="embla overflow-hidden flex flex-col gap-8" ref={emblaRef}>
+        <div
+            className="embla flex flex-col gap-8 overflow-hidden"
+            ref={emblaRef}
+        >
             <div className="embla__container flex gap-8">
                 {React.Children.map(children, (child, index) => {
                     // Ensure the child is a valid React element before cloning
@@ -33,12 +36,18 @@ const Carousel = ({ children }: { children: React.ReactNode }) => {
             </div>
             {currentMode === "dark" ? (
                 <div className="flex flex-row justify-between">
-                    <ArrowDark onClick={scrollPrev} className="embla__prev" />
+                    <ArrowDark
+                        onClick={scrollPrev}
+                        className="embla__prev rotate-180"
+                    />
                     <ArrowDark onClick={scrollNext} className="embla__next" />
                 </div>
             ) : (
                 <div className="flex flex-row justify-between">
-                    <ArrowLight onClick={scrollPrev} className="embla__prev" />
+                    <ArrowLight
+                        onClick={scrollPrev}
+                        className="embla__prev rotate-180"
+                    />
                     <ArrowLight onClick={scrollNext} className="embla__next" />
                 </div>
             )}

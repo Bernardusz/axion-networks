@@ -123,9 +123,6 @@
     body {
         @apply bg-background text-foreground;
     }
-    section {
-        @apply p-12;
-    }
     h1 {
         @apply text-8xl font-extrabold;
     }
@@ -157,5 +154,17 @@
 
     .btn-primary {
         @apply min-h-12 min-w-32;
+    }
+
+    .section {
+        @apply px-8 py-12 md:px-12 md:py-24;
+    }
+
+    .bento-image {
+        @apply h-full w-full rounded-xl object-cover transition-transform duration-300 hover:shadow-xl motion-safe:hover:scale-110;
+    }
+
+    .bento-container {
+        @apply h-full w-full overflow-hidden;
     }
 }

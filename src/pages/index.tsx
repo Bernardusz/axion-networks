@@ -13,53 +13,52 @@ const HomePage = () => {
     // const toggleMode = useMode((state) => state.toggleMode)
     return (
         <div className="page">
-            <section className="from-background via-primary dark:via-secondary to-background flex h-[80vh] flex-col items-center justify-center gap-8 bg-linear-to-br from-25% via-50% to-75% p-24">
+            <section className="from-background via-primary dark:via-secondary to-background mb-16 flex h-[80vh] flex-col items-center justify-center gap-8 bg-linear-to-br from-25% via-50% to-75% p-24">
                 <h1 className="text-center">Secure and Robust Server</h1>
                 <p>
                     A secure and robust VPS with 100% uptime. Perfect for your
                     apps, projects, and businesses.
                 </p>
-                <div className="flex w-full flex-row justify-between px-8">
+                <div className="flex w-full flex-row justify-center gap-16 px-8">
                     <Button className="btn-primary">Host Now</Button>
                     <Button className="btn-primary">Learn More</Button>
                 </div>
             </section>
-            <section className="border-border grid h-120 grid-cols-3 border-8">
-                {/* <img
-					src="/public/images/pexels-joshsorenson-1054397.jpg" alt=""
-					className="col-span-1 row-span-1"
-				/>
-				<img
-					src="/public/images/pexels-joshsorenson-1054397.jpg" alt=""
-					className="col-span-1 row-span-2"
-				/>
-				<img
-					src="/public/images/pexels-joshsorenson-1054397.jpg" alt=""
-					className="col-span-1 row-span-1"
-				/>
-				<img
-					src="/public/images/pexels-joshsorenson-1054397.jpg" alt=""
-					className="col-span-1 row-span-2"
-				/>
-				<img
-					src="/public/images/pexels-joshsorenson-1054397.jpg" alt=""
-					className="col-span-2 row-span-1"
-				/>
-				<img
-					src="/public/images/pexels-joshsorenson-1054397.jpg" alt=""
-					className="col-span-1 row-span-1"
-				/>
-				<img
-					src="/public/images/pexels-joshsorenson-1054397.jpg" alt=""
-					className="col-span-1 row-span-1"
-				/>
-				<img
-					src="/public/images/pexels-joshsorenson-1054397.jpg" alt=""
-					className="col-span-1 row-span-1"
-				/> */}
-                ADD IMAGES LATER
+
+            <section className="relative overflow-hidden">
+                <div className="from-background pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-linear-to-r to-transparent" />
+                <div className="from-background pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-linear-to-l to-transparent" />
+
+                <div className="grid w-[120vw] translate-x-[-10vw] grid-flow-dense auto-rows-[160px] grid-cols-4 gap-6">
+                    <img
+                        src="/public/images/pexels-joshsorenson-1054397.jpg"
+                        alt=""
+                        className="bento-image col-span-2 col-start-2 row-span-1 row-start-2"
+                    />
+                    <img
+                        src="/public/images/pexels-joshsorenson-1054397.jpg"
+                        alt=""
+                        className="bento-image col-span-3 row-span-1"
+                    />
+                    <img
+                        src="/public/images/pexels-joshsorenson-1054397.jpg"
+                        alt=""
+                        className="bento-image col-span-1 row-span-3"
+                    />
+                    <img
+                        src="/public/images/pexels-joshsorenson-1054397.jpg"
+                        alt=""
+                        className="bento-image col-span-1 row-span-2"
+                    />
+                    <img
+                        src="/public/images/pexels-joshsorenson-1054397.jpg"
+                        alt=""
+                        className="bento-image col-span-2 row-span-1"
+                    />
+                </div>
             </section>
-            <section>
+
+            <section className="section">
                 <TitleParagraph
                     title="Choose how much control"
                     text="Axion Networks is a VPS Company that gives you the control to decide your need. You decide your need not us."
@@ -91,7 +90,7 @@ const HomePage = () => {
                     linkText="Learn More ->"
                 />
             </FlexSection>
-            <section>
+            <section className="section">
                 <TitleParagraph
                     title="Robust and Secure Infrastructure"
                     text="Making sure you can Deploy and Secure your apps at ease. Scale your apps and products without any problem."
@@ -123,8 +122,10 @@ const HomePage = () => {
                     imageAlt="an img"
                 />
             </FlexSection>
-            <section className="flex flex-col gap-16">
-				<h3 className="w-9/10">Don't just take our words, take theirs as well</h3>
+            <section className="section flex flex-col gap-16">
+                <h3 className="w-9/10">
+                    Don't just take our words, take theirs as well
+                </h3>
                 <Carousel>
                     <TestimonyCard
                         text="“Axion Networks helped us to deploy our apps rapidly and later scale to VPS when we needed it!”"
@@ -163,42 +164,56 @@ const HomePage = () => {
                     />
                 </Carousel>
             </section>
-			<section className="flex flex-col gap-8">
-				<h3>Frequently Asked Questions</h3>
-				<Accordion
-					type="single"
-					collapsible
-					className="w-full"
-					defaultValue="item-1"
-				>
-					<AccordionItem value="item-1">
-						<AccordionTrigger><h4>Is it really that robust ?</h4></AccordionTrigger>
-						<AccordionContent className="flex flex-col gap-4">
-							<p>
-								Our servers have intense maintenence, tested in real production environtment, heavy workloads and massive requests in seconds, barely any sweat.
-							</p>
-						</AccordionContent>
-					</AccordionItem>
-					<AccordionItem value="item-2">
-						<AccordionTrigger><h4>Is it really that robust ?</h4></AccordionTrigger>
-						<AccordionContent className="flex flex-col gap-4">
-							<p>
-								Our servers have intense maintenence, tested in real production environtment, heavy workloads and massive requests in seconds, barely any sweat.
-							</p>
-						</AccordionContent>
-					</AccordionItem>
-					<AccordionItem value="item-3">
-						<AccordionTrigger><h4>Is it really that robust ?</h4></AccordionTrigger>
-						<AccordionContent className="flex flex-col gap-4">
-							<p>
-								Our servers have intense maintenence, tested in real production environtment, heavy workloads and massive requests in seconds, barely any sweat.
-							</p>
-						</AccordionContent>
-					</AccordionItem>
-				</Accordion>
-			</section>
-			<CallToAction/>
-
+            <section className="section flex flex-col gap-8">
+                <h3>Frequently Asked Questions</h3>
+                <Accordion
+                    type="single"
+                    collapsible
+                    className="w-full"
+                    defaultValue="item-1"
+                >
+                    <AccordionItem value="item-1">
+                        <AccordionTrigger>
+                            <h4>Is it really that robust ?</h4>
+                        </AccordionTrigger>
+                        <AccordionContent className="flex flex-col gap-4">
+                            <p>
+                                Our servers have intense maintenence, tested in
+                                real production environtment, heavy workloads
+                                and massive requests in seconds, barely any
+                                sweat.
+                            </p>
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-2">
+                        <AccordionTrigger>
+                            <h4>Is it really that robust ?</h4>
+                        </AccordionTrigger>
+                        <AccordionContent className="flex flex-col gap-4">
+                            <p>
+                                Our servers have intense maintenence, tested in
+                                real production environtment, heavy workloads
+                                and massive requests in seconds, barely any
+                                sweat.
+                            </p>
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-3">
+                        <AccordionTrigger>
+                            <h4>Is it really that robust ?</h4>
+                        </AccordionTrigger>
+                        <AccordionContent className="flex flex-col gap-4">
+                            <p>
+                                Our servers have intense maintenence, tested in
+                                real production environtment, heavy workloads
+                                and massive requests in seconds, barely any
+                                sweat.
+                            </p>
+                        </AccordionContent>
+                    </AccordionItem>
+                </Accordion>
+            </section>
+            <CallToAction />
         </div>
     );
 };

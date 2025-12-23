@@ -9,7 +9,7 @@ const DefaultLayout = () => {
             <Header />
             <Hamburger />
             <Outlet />
-			<Footer/>
+            <Footer />
         </div>
     );
 };
