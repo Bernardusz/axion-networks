@@ -7,12 +7,12 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 
-type mainCardProps = {
+export type mainCardProps = {
     imageSrc: string;
     imageAlt: string;
     title: string;
     text: string;
-    action: React.ReactNode;
+    action?: React.ReactNode;
     type: "flex-col" | "flex-row";
 };
 

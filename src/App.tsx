@@ -13,6 +13,9 @@ import DashboardLayout from "@/layout/_dashboardLayout";
 import DashboardPage from "@/pages/dashboard";
 import DeploymentPage from "@/pages/deployment";
 import SettingsPage from "@/pages/settings";
+import ProductsGidPage from "@/pages/products.gid";
+import ProductsCpanelPage from "@/pages/products.cpanel";
+import ProductsVpsPage from "@/pages/products.vps";
 
 function App() {
     const mode = useMode(state => state.mode);
@@ -31,6 +34,10 @@ function App() {
                     <Route path="pricing" element={<PricingPage />} />
                     <Route path="login" element={<LoginPage />} />
                     <Route path="signup" element={<SignUpPage />} />
+					<Route path="products/gid" element={<ProductsGidPage/>}/>
+					<Route path="products/cpanel" element={<ProductsCpanelPage/>}/>
+					<Route path="products/vps" element={<ProductsVpsPage/>}/>
+
                 </Route>
                 <Route element={<DashboardLayout />}>
                     <Route path="dashboard" element={<DashboardPage />} />

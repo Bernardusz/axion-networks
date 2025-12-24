@@ -9,40 +9,27 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import type React from "react";
 
-const DialogContainer = ({ children }: { children: React.ReactNode }) => {
+type dialogContainerProps = {
+	children: React.ReactNode
+	title: string
+	description: string
+	action: React.ReactNode
+}
+
+const DialogContainer = ({ children, title, description, action }: dialogContainerProps) => {
     return (
         <Dialog>
-            <DialogTrigger asChild>{children}</DialogTrigger>
-            <DialogContent className="sm:max-w-106.25">
+            <DialogTrigger asChild>{action}</DialogTrigger>
+            <DialogContent className="min-w-[80vw] h-80vh overflow-scroll pt-20">
                 <DialogHeader>
-                    <DialogTitle>Edit profile</DialogTitle>
+                    <DialogTitle><h2 className="max-w-120 pl-8">{title}</h2></DialogTitle>
                     <DialogDescription>
-                        Make changes to your profile here. Click save when
-                        you&apos;re done.
+                        <p className="pl-8">{description}</p>
                     </DialogDescription>
                 </DialogHeader>
-                <div className="grid gap-4">
-                    <div className="grid gap-3">
-                        <Label htmlFor="name-1">Name</Label>
-                        <Input
-                            id="name-1"
-                            name="name"
-                            defaultValue="Pedro Duarte"
-                        />
-                    </div>
-                    <div className="grid gap-3">
-                        <Label htmlFor="username-1">Username</Label>
-                        <Input
-                            id="username-1"
-                            name="username"
-                            defaultValue="@peduarte"
-                        />
-                    </div>
-                </div>
+                {children}
                 <DialogFooter>
                     <DialogClose asChild>
                         <Button variant="outline">Cancel</Button>
