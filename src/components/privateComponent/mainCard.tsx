@@ -8,12 +8,13 @@ import {
 } from "@/components/ui/card";
 
 export type mainCardProps = {
-    imageSrc: string;
-    imageAlt: string;
+    imageSrc?: string;
+    imageAlt?: string;
     title: string;
     text: string;
     action?: React.ReactNode;
     type: "flex-col" | "flex-row";
+	className?: string
 };
 
 const MainCard = ({
@@ -23,12 +24,13 @@ const MainCard = ({
     text,
     action,
     type,
+	className,
     ...props
 }: mainCardProps) => {
     return (
         <Card
             {...props}
-            className="transition-transform duration-300 hover:scale-[1.03]"
+            className={`transition-transform duration-300 hover:scale-[1.03] ${className}`}
         >
             <CardContent>
                 <img src={imageSrc} alt={imageAlt} />
@@ -43,7 +45,7 @@ const MainCard = ({
                     </CardDescription>
                 </div>
                 <CardAction
-                    className={`items-end justify-end ${type === "flex-row" ? "pt-8 pr-4" : ""}`}
+                    className={`items-end justify-end ${type === "flex-row" ? "pt-8 pr-4" : "w-full"}`}
                 >
                     {action}
                 </CardAction>
