@@ -1,8 +1,16 @@
 import type React from "react";
 
-const FlexSection = ({ children, className }: { children: React.ReactNode, className?: string }) => {
+const FlexSection = ({
+    children,
+    className,
+}: {
+    children: React.ReactNode;
+    className?: string;
+}) => {
     return (
-        <section className={`section flex min-h-60 w-full flex-1 flex-col justify-center gap-16 md:gap-24 xl:flex-row xl:gap-8 ${className}`}>
+        <section
+            className={`section flex min-h-60 w-full flex-1 flex-col justify-center gap-16 md:gap-24 xl:flex-row xl:gap-8 ${className}`}
+        >
             {children}
         </section>
     );

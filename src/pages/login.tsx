@@ -2,28 +2,43 @@ import UserManagementCard from "@/components/privateComponent/userManagementCard
 import { useState } from "react";
 
 const LoginPage = () => {
-	const [ username, setUsername ] = useState<string>("");
-	const [ password, setPassword ] = useState<string>("");
-	const handleLogin = () => {
-		alert("Frontend App only !")
-	}
+    const [username, setUsername] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
+    const handleLogin = () => {
+        alert("Frontend App only !");
+    };
     return (
-		<div className="page">
-			<section className="section w-full items-center justify-center flex my-20">
-				<UserManagementCard
-				title="Login to your account"
-				paragraph="Enter yout username below to login to your account"
-				otherText="Sign Up"
-				otherLink="/signup"
-				inputs={[
-					{id: "username", label: "Username", value: username, setValue: setUsername, type: "text", placeholder: "Enter your username"},
-					{id: "password", label: "Password", value: password, setValue: setPassword, type: "password", placeholder: "Enter your password"},
-				]}
-				handleSubmit={handleLogin}
-			/>
-			</section>
-		</div>
-	);
+        <div className="page">
+            <section className="section my-20 flex w-full items-center justify-center">
+                <UserManagementCard
+                    title="Login to your account"
+                    paragraph="Enter yout username below to login to your account"
+                    otherText="Sign Up"
+                    otherLink="/signup"
+                    inputs={[
+                        {
+                            id: "username",
+                            label: "Username",
+                            value: username,
+                            setValue: setUsername,
+                            type: "text",
+                            placeholder: "Enter your username",
+                        },
+                        {
+                            id: "password",
+                            label: "Password",
+                            value: password,
+                            setValue: setPassword,
+                            type: "password",
+                            placeholder: "Enter your password",
+                        },
+                    ]}
+                    handleSubmit={handleLogin}
+                    buttonText="Login"
+                />
+            </section>
+        </div>
+    );
 };
 
 export default LoginPage;

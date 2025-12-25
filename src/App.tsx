@@ -34,10 +34,12 @@ function App() {
                     <Route path="pricing" element={<PricingPage />} />
                     <Route path="login" element={<LoginPage />} />
                     <Route path="signup" element={<SignUpPage />} />
-					<Route path="products/gid" element={<ProductsGidPage/>}/>
-					<Route path="products/cpanel" element={<ProductsCpanelPage/>}/>
-					<Route path="products/vps" element={<ProductsVpsPage/>}/>
-
+                    <Route path="products/gid" element={<ProductsGidPage />} />
+                    <Route
+                        path="products/cpanel"
+                        element={<ProductsCpanelPage />}
+                    />
+                    <Route path="products/vps" element={<ProductsVpsPage />} />
                 </Route>
                 <Route element={<DashboardLayout />}>
                     <Route path="dashboard" element={<DashboardPage />} />

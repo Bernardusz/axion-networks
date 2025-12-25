@@ -14,7 +14,7 @@ export type mainCardProps = {
     text: string;
     action?: React.ReactNode;
     type: "flex-col" | "flex-row";
-	className?: string
+    className?: string;
 };
 
 const MainCard = ({
@@ -24,7 +24,7 @@ const MainCard = ({
     text,
     action,
     type,
-	className,
+    className,
     ...props
 }: mainCardProps) => {
     return (

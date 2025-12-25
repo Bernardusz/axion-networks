@@ -9,9 +9,9 @@ const DefaultLayout = () => {
         <div className="page">
             <Header />
             <Hamburger />
-			<Toaster/>
+            <Toaster />
             <Outlet />
-			
+
             <Footer />
         </div>
     );
