@@ -40,12 +40,12 @@ function App() {
                     <Route path="products/vps" element={<ProductsVpsPage />} />
                 </Route>
                 <Route element={<DefaultLayout />}>
-					<Route element={<PublicOnlyRoute />}>
-						<Route path="login" element={<LoginPage />} />
-						<Route path="signup" element={<SignUpPage />} />
-					</Route>
-				</Route>
-				
+                    <Route element={<PublicOnlyRoute />}>
+                        <Route path="login" element={<LoginPage />} />
+                        <Route path="signup" element={<SignUpPage />} />
+                    </Route>
+                </Route>
+
                 <Route element={<ProtectedRoute />}>
                     <Route path="dashboard" element={<DashboardLayout />}>
                         <Route index element={<DashboardPage />} />

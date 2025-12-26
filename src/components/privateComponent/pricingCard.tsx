@@ -38,7 +38,7 @@ const PricingCard = ({
             className="flex flex-col justify-between transition-transform duration-300 hover:scale-[1.03]"
         >
             <div className="flex min-h-140 min-w-100 flex-col gap-4 px-2 py-2">
-                <CardHeader className={`flex flex-row justify-between h-36`}>
+                <CardHeader className={`flex h-36 flex-row justify-between`}>
                     <div className="flex flex-col gap-1">
                         <CardTitle>
                             <h4>{title}</h4>
