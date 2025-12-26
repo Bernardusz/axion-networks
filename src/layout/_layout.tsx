@@ -32,7 +32,7 @@ const DefaultLayout = () => {
         <SidebarProvider className="flex flex-col">
             <Header />
             {isMobile && <AppSidebar />}
-            <main>
+            <main className="h-fit w-full">
                 <Outlet />
             </main>
             <Footer />

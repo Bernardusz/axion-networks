@@ -8,7 +8,7 @@ const DashboardLayout = () => {
         <SidebarProvider>
             <Header />
             <AppSidebar />
-            <main>
+            <main className="h-fit w-full">
                 <Outlet />
             </main>
         </SidebarProvider>
