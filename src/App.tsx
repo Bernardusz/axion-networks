@@ -1,21 +1,21 @@
-// import { useState } from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-
-import HomePage from "@/pages";
 import { useEffect } from "react";
-import useMode from "@/context/mode";
+import useMode from "@/context/useMode";
 import ProductsPage from "@/pages/products";
 import PricingPage from "@/pages/pricing";
 import LoginPage from "@/pages/login";
 import SignUpPage from "@/pages/signup";
 import DefaultLayout from "@/layout/_layout";
 import DashboardLayout from "@/layout/_dashboardLayout";
-import DashboardPage from "@/pages/dashboard";
 import DeploymentPage from "@/pages/deployment";
 import SettingsPage from "@/pages/settings";
 import ProductsGidPage from "@/pages/products.gid";
 import ProductsCpanelPage from "@/pages/products.cpanel";
 import ProductsVpsPage from "@/pages/products.vps";
+import PublicOnlyRoute from "@/routing/publicOnlyRoute";
+import ProtectedRoute from "@/routing/protectedRoute";
+import HomePage from "@/pages";
+import DashboardPage from "@/pages/dashboard";
 
 function App() {
     const mode = useMode(state => state.mode);
@@ -32,8 +32,6 @@ function App() {
                     <Route index element={<HomePage />} />
                     <Route path="products" element={<ProductsPage />} />
                     <Route path="pricing" element={<PricingPage />} />
-                    <Route path="login" element={<LoginPage />} />
-                    <Route path="signup" element={<SignUpPage />} />
                     <Route path="products/gid" element={<ProductsGidPage />} />
                     <Route
                         path="products/cpanel"
@@ -41,10 +39,19 @@ function App() {
                     />
                     <Route path="products/vps" element={<ProductsVpsPage />} />
                 </Route>
-                <Route element={<DashboardLayout />}>
-                    <Route path="dashboard" element={<DashboardPage />} />
-                    <Route path="deployment" element={<DeploymentPage />} />
-                    <Route path="settings" element={<SettingsPage />} />
+                <Route element={<DefaultLayout />}>
+					<Route element={<PublicOnlyRoute />}>
+						<Route path="login" element={<LoginPage />} />
+						<Route path="signup" element={<SignUpPage />} />
+					</Route>
+				</Route>
+				
+                <Route element={<ProtectedRoute />}>
+                    <Route path="dashboard" element={<DashboardLayout />}>
+                        <Route index element={<DashboardPage />} />
+                        <Route path="deployment" element={<DeploymentPage />} />
+                        <Route path="settings" element={<SettingsPage />} />
+                    </Route>
                 </Route>
             </Routes>
         </BrowserRouter>

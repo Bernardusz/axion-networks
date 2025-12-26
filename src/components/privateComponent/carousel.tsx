@@ -3,7 +3,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import ArrowDark from "@/assets/CarouselArrow - D.svg?react";
 import ArrowLight from "@/assets/CarouselArrow - L.svg?react";
-import useMode from "@/context/mode";
+import useMode from "@/context/useMode";
 const Carousel = ({ children }: { children: React.ReactNode }) => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
 

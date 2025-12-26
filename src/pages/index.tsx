@@ -14,7 +14,7 @@ const HomePage = () => {
     // const toggleMode = useMode((state) => state.toggleMode)
     return (
         <div className="page">
-            <section className="from-background via-primary dark:via-secondary to-background mb-16 flex h-[80vh] flex-col items-center justify-center gap-8 bg-linear-to-br from-25% via-50% to-75% p-24">
+            <section className="from-background via-primary dark:via-secondary to-background mb-16 flex h-[80vh] w-full flex-col items-center justify-center gap-8 bg-linear-to-br from-25% via-50% to-75% p-24">
                 <h1 className="text-center">Secure and Robust Server</h1>
                 <p>
                     A secure and robust VPS with 100% uptime. Perfect for your
@@ -30,7 +30,7 @@ const HomePage = () => {
                 <div className="from-background pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-linear-to-r to-transparent" />
                 <div className="from-background pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-linear-to-l to-transparent" />
 
-                <div className="grid w-[120vw] translate-x-[-10vw] grid-flow-dense auto-rows-[160px] grid-cols-4 gap-6">
+                <div className="grid w-[120vw] translate-x-[4vw] grid-flow-dense auto-rows-[160px] grid-cols-4 gap-6">
                     <img
                         src="/public/images/pexels-joshsorenson-1054397.jpg"
                         alt=""

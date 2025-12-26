@@ -2,7 +2,7 @@ import MainCard from "@/components/privateComponent/mainCard";
 import TitleParagraph from "@/components/privateComponent/titleParagraph";
 import DarkArrow from "@/assets/CarouselArrow - D.svg?react";
 import LightArrow from "@/assets/CarouselArrow - L.svg?react";
-import useMode from "@/context/mode";
+import useMode from "@/context/useMode";
 import FlexSection from "@/components/section/flexSection";
 import CallToAction from "@/components/staticComponent/callToAction";
 import { Link } from "react-router-dom";
