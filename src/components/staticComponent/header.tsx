@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <header className="bg-background text-foreground fixed top-0 left-0 z-50 flex h-24 w-full flex-row items-center justify-between border px-8">
             <AxionLogo className="aspect-square h-16 w-16" />
-            <nav className="hidden flex-row gap-4 xl:flex">
+            <nav className="hidden flex-row gap-4 md:flex">
                 <Link className="link-primary" to="/">
                     Home
                 </Link>
@@ -19,7 +19,7 @@ const Header = () => {
                     Pricing
                 </Link>
             </nav>
-            <nav className="hidden flex-row gap-4 xl:flex">
+            <nav className="hidden flex-row gap-4 md:flex">
                 <Link className="link-primary" to="/login">
                     Login
                 </Link>

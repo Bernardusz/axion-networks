@@ -145,7 +145,7 @@
         @apply flex h-fit w-full flex-col items-center justify-center;
     }
     .p-deemphasize {
-        @apply text-xl font-normal;
+        @apply text-xl font-normal text-muted-foreground;
     }
 
     .link-primary {
@@ -157,7 +157,7 @@
     }
 
     .section {
-        @apply px-8 py-12 md:px-12 md:py-24;
+        @apply px-8 py-12 md:px-12 md:py-16;
     }
 
     .bento-image {
