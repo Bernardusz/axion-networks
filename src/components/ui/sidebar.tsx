@@ -285,7 +285,7 @@ function SidebarTrigger({
             }}
             {...props}
         >
-            <BiMenu className={cn("size-15")} />
+            <BiMenu className={cn("size-10")} />
             <span className="sr-only">Toggle Sidebar</span>
         </Button>
     );
