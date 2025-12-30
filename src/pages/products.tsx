@@ -20,11 +20,12 @@ const ProductsPage = () => {
                     loading="lazy"
                     src="/images/website-hosting-concept-with-circuits.jpg"
                     alt=""
-                    className="max-h-80 w-full rounded-xl object-cover"
+                    className="max-h-160 w-full rounded-xl object-cover"
                 />
             </section>
             <section className="section flex flex-col gap-16">
                 <TitleParagraph
+                    className="px-16"
                     title="Deploy with no limitation"
                     text="We don't decide how you host your apps, you do. Your apps - Your needs - Your way"
                 />

@@ -37,8 +37,8 @@ const PricingCard = ({
             {...props}
             className="flex flex-col justify-between transition-transform duration-300 hover:scale-[1.03]"
         >
-            <div className="flex min-h-140 min-w-100 flex-col gap-4 px-2 py-2">
-                <CardHeader className={`flex h-36 flex-row justify-between`}>
+            <div className="flex min-h-100 min-w-100 flex-col px-2 py-2">
+                <CardHeader className={`flex h-26 flex-row justify-between`}>
                     <div className="flex flex-col gap-1">
                         <CardTitle>
                             <h4>{title}</h4>
@@ -56,7 +56,7 @@ const PricingCard = ({
                     </CardAction>
                 </CardHeader>
                 <CardContent className="flex flex-col gap-4">
-                    <div className="flex w-full flex-col justify-start gap-4">
+                    <div className="flex w-full flex-col justify-start gap-2">
                         <hr className="w-full" />
                         <div className="flex flex-row items-end gap-2 pl-6">
                             <h4>{anually ? priceYearly : priceMonthly}</h4>

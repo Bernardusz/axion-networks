@@ -1,13 +1,16 @@
 type paragraphProps = {
     title: string;
     text: string;
+    className?: string;
 };
 
-const TitleParagraph = ({ title, text }: paragraphProps) => {
+const TitleParagraph = ({ title, text, className }: paragraphProps) => {
     return (
-        <div className="flex max-w-4/5 flex-col justify-items-start gap-4">
+        <div
+            className={`flex max-w-4/5 flex-col justify-items-start gap-4 ${className}`}
+        >
             <h3 className="text-left">{title}</h3>
-            <p>{text}</p>
+            <p className="w-2/5">{text}</p>
         </div>
     );
 };

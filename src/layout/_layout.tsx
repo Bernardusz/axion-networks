@@ -20,22 +20,36 @@
 // export default DefaultLayout;
 
 import { Outlet } from "react-router-dom";
-import { SidebarProvider } from "@/components/ui/sidebar";
-import AppSidebar from "@/components/staticComponent/sidebarApp";
 import Header from "@/components/staticComponent/header";
 import Footer from "@/components/staticComponent/footer";
-import { useIsMobile } from "@/hooks/use-mobile";
 import { Toaster } from "sonner";
+import SiteHeader from "@/components/ui/site-header";
+
+// import Header from "@/components/staticComponent/header";
+import { AppSidebar } from "@/components/ui/app-sidebar";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { useIsMobile } from "@/hooks/use-mobile";
+
 const DefaultLayout = () => {
     const isMobile = useIsMobile();
     return isMobile ? (
-        <SidebarProvider className="flex flex-col">
-            <Header />
-            {isMobile && <AppSidebar />}
-            <main className="h-fit w-full">
-                <Outlet />
-            </main>
-            <Footer />
+        <SidebarProvider
+            style={
+                {
+                    "--sidebar-width": "calc(var(--spacing) * 72)",
+                    "--header-height": "calc(var(--spacing) * 12)",
+                } as React.CSSProperties
+            }
+        >
+            <AppSidebar variant="inset" side={isMobile ? "right" : "left"} />
+            <SidebarInset>
+                <SiteHeader />
+
+                <main>
+                    <Outlet />
+                </main>
+                <Footer />
+            </SidebarInset>
         </SidebarProvider>
     ) : (
         <div className="page">

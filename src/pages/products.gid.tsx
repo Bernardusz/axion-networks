@@ -6,7 +6,7 @@ const ProductsGidPage = () => {
                 <img
                     src="/images/ai-generated-8994400_1280.jpg"
                     alt=""
-                    className="block h-[70vh] w-full object-cover"
+                    className="block h-[70vh] w-full rounded-xl object-cover"
                 />
                 <div className="section flex flex-col gap-4 xl:px-32">
                     <h2>Git Integrated Deployment</h2>

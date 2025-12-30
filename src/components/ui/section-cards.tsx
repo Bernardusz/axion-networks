@@ -1,102 +1,130 @@
-import { IconTrendingDown, IconTrendingUp } from "@tabler/icons-react"
+import DashboardCard, {
+    type dashboardCardProps,
+} from "@/components/privateComponent/dashboardCard";
+import { useEffect, useState } from "react";
 
-import { Badge } from "@/components/ui/badge"
-import {
-  Card,
-  CardAction,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+type usageProps = {
+    cpu: dashboardCardProps;
+    ram: dashboardCardProps;
+    bandwidth: dashboardCardProps;
+    storage: dashboardCardProps;
+};
+
+const mockUsage: usageProps = {
+    cpu: {
+        title: "50%",
+        description: "CPU Usage",
+        usage: "1vCPU / 2vCPU",
+        upOrDown: "Up",
+        firstNote: "15% less usage compared to last month",
+        progress: 50,
+    },
+    ram: {
+        title: "68%",
+        description: "RAM Usage",
+        usage: "5.44GB / 8GB",
+        upOrDown: "Up",
+        firstNote: "21% less usage compared to last month",
+        progress: 68,
+    },
+    bandwidth: {
+        title: "42%",
+        description: "CPU Usage",
+        usage: "1.68TB / 4TB",
+        upOrDown: "Down",
+        firstNote: "23% less usage compared to last month",
+        progress: 42,
+    },
+    storage: {
+        title: "76%",
+        description: "Storage",
+        usage: "76GB / 100GB",
+        upOrDown: "Up",
+        firstNote: "6% more usage compared to last month",
+        progress: 50,
+    },
+};
 
 export function SectionCards() {
-  return (
-    <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
-      <Card className="@container/card">
-        <CardHeader>
-          <CardDescription>Total Revenue</CardDescription>
-          <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            $1,250.00
-          </CardTitle>
-          <CardAction>
-            <Badge variant="outline">
-              <IconTrendingUp />
-              +12.5%
-            </Badge>
-          </CardAction>
-        </CardHeader>
-        <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <div className="line-clamp-1 flex gap-2 font-medium">
-            Trending up this month <IconTrendingUp className="size-4" />
-          </div>
-          <div className="text-muted-foreground">
-            Visitors for the last 6 months
-          </div>
-        </CardFooter>
-      </Card>
-      <Card className="@container/card">
-        <CardHeader>
-          <CardDescription>New Customers</CardDescription>
-          <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            1,234
-          </CardTitle>
-          <CardAction>
-            <Badge variant="outline">
-              <IconTrendingDown />
-              -20%
-            </Badge>
-          </CardAction>
-        </CardHeader>
-        <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <div className="line-clamp-1 flex gap-2 font-medium">
-            Down 20% this period <IconTrendingDown className="size-4" />
-          </div>
-          <div className="text-muted-foreground">
-            Acquisition needs attention
-          </div>
-        </CardFooter>
-      </Card>
-      <Card className="@container/card">
-        <CardHeader>
-          <CardDescription>Active Accounts</CardDescription>
-          <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            45,678
-          </CardTitle>
-          <CardAction>
-            <Badge variant="outline">
-              <IconTrendingUp />
-              +12.5%
-            </Badge>
-          </CardAction>
-        </CardHeader>
-        <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <div className="line-clamp-1 flex gap-2 font-medium">
-            Strong user retention <IconTrendingUp className="size-4" />
-          </div>
-          <div className="text-muted-foreground">Engagement exceed targets</div>
-        </CardFooter>
-      </Card>
-      <Card className="@container/card">
-        <CardHeader>
-          <CardDescription>Growth Rate</CardDescription>
-          <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            4.5%
-          </CardTitle>
-          <CardAction>
-            <Badge variant="outline">
-              <IconTrendingUp />
-              +4.5%
-            </Badge>
-          </CardAction>
-        </CardHeader>
-        <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <div className="line-clamp-1 flex gap-2 font-medium">
-            Steady performance increase <IconTrendingUp className="size-4" />
-          </div>
-          <div className="text-muted-foreground">Meets growth projections</div>
-        </CardFooter>
-      </Card>
-    </div>
-  )
+    const [usage, setUsage] = useState<usageProps>({
+        cpu: {
+            title: "",
+            description: "",
+            usage: "",
+            upOrDown: "Up",
+            firstNote: "",
+            progress: 0,
+        },
+        ram: {
+            title: "",
+            description: "",
+            usage: "",
+            upOrDown: "Up",
+            firstNote: "",
+            progress: 0,
+        },
+        bandwidth: {
+            title: "",
+            description: "",
+            usage: "",
+            upOrDown: "Up",
+            firstNote: "",
+            progress: 0,
+        },
+        storage: {
+            title: "",
+            description: "",
+            usage: "",
+            upOrDown: "Up",
+            firstNote: "",
+            progress: 0,
+        },
+    });
+
+    const fetchUsage = async () => {
+        return mockUsage;
+    };
+
+    useEffect(() => {
+        fetchUsage().then(data => {
+            setUsage(data);
+        });
+    }, []);
+
+    return (
+        <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-linear-to-t *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
+            <DashboardCard
+                description={usage.cpu.description}
+                title={usage.cpu.title}
+                usage={usage.cpu.usage}
+                upOrDown={usage.cpu.upOrDown}
+                firstNote={usage.cpu.firstNote}
+                progress={usage.cpu.progress}
+            />
+            <DashboardCard
+                description={usage.ram.description}
+                title={usage.ram.title}
+                usage={usage.ram.usage}
+                upOrDown={usage.ram.upOrDown}
+                firstNote={usage.ram.firstNote}
+                progress={usage.ram.progress}
+            />
+            <DashboardCard
+                description={usage.bandwidth.description}
+                title={usage.bandwidth.title}
+                usage={usage.bandwidth.usage}
+                upOrDown={usage.bandwidth.upOrDown}
+                firstNote={usage.bandwidth.firstNote}
+                progress={usage.bandwidth.progress}
+            />
+            <DashboardCard
+                description={usage.storage.description}
+                title={usage.storage.title}
+                usage={usage.storage.usage}
+                upOrDown={usage.storage.upOrDown}
+                firstNote={usage.storage.firstNote}
+                progress={usage.storage.progress}
+            />
+        </div>
+    );
 }

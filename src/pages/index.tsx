@@ -59,7 +59,7 @@ const HomePage = () => {
                 </div>
             </section>
 
-            <section className="section">
+            <section className="section w-full">
                 <TitleParagraph
                     title="Choose how much control"
                     text="Axion Networks is a VPS Company that gives you the control to decide your need. You decide your need not us."
@@ -103,7 +103,7 @@ const HomePage = () => {
                     type="flex-col"
                 />
             </FlexSection>
-            <section className="section">
+            <section className="section w-full">
                 <TitleParagraph
                     title="Robust and Secure Infrastructure"
                     text="Making sure you can Deploy and Secure your apps at ease. Scale your apps and products without any problem."
@@ -147,7 +147,7 @@ const HomePage = () => {
                     type="flex-col"
                 />
             </FlexSection>
-            <section className="section flex flex-col gap-16">
+            <section className="section flex w-full flex-col gap-16">
                 <h3 className="w-9/10">
                     Don't just take our words, take theirs as well
                 </h3>

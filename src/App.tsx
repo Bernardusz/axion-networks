@@ -16,6 +16,7 @@ import PublicOnlyRoute from "@/routing/publicOnlyRoute";
 import ProtectedRoute from "@/routing/protectedRoute";
 import HomePage from "@/pages";
 import DashboardPage from "@/pages/dashboard";
+import "@/components/privateComponent/paginatedTable";
 
 function App() {
     const mode = useMode(state => state.mode);

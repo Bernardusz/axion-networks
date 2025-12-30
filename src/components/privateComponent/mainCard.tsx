@@ -33,11 +33,11 @@ const MainCard = ({
             className={`transition-transform duration-300 hover:scale-[1.03] ${className}`}
         >
             {imageSrc && (
-				<CardContent>
-                	<img src={imageSrc} alt={imageAlt} />
-            	</CardContent>
-			)}
-            <CardHeader className={`flex ${type} justify-between gap-4 w-full`}>
+                <CardContent>
+                    <img src={imageSrc} alt={imageAlt} />
+                </CardContent>
+            )}
+            <CardHeader className={`flex ${type} w-full justify-between gap-4`}>
                 <div className="flex flex-col gap-4">
                     <CardTitle>
                         <h4>{title}</h4>

@@ -10,8 +10,8 @@ const PricingPage = () => {
     return (
         <div className="page">
             <section className="section mt-[20vh] flex flex-col items-center justify-center gap-8">
-                <h1 className="text-center">Choose how you deploy</h1>
-                <p>Choose how you deploy - your apps, your way</p>
+                <h1 className="text-center">Pricing</h1>
+                <p>Pick how much power your apps need</p>
             </section>
             <FlexSection className="px-16">
                 <PricingCard
@@ -67,7 +67,7 @@ const PricingPage = () => {
                 />
             </FlexSection>
 
-            <section className="flex w-full justify-center px-16 xl:-mt-14">
+            <section className="flex w-full justify-center px-16 xl:-mt-10">
                 <MainCard
                     title="Enterprise"
                     text="Infrastructure that doesn’t blink"

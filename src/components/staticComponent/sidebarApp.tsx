@@ -58,14 +58,19 @@ const AppSidebar = ({ className }: { className?: string }) => {
                     <SidebarGroupContent>
                         <SidebarMenu>
                             {items.map(item => (
-                                <SidebarMenuItem key={item.title} className="w-full h-10zo">
+                                <SidebarMenuItem
+                                    key={item.title}
+                                    className="h-10zo w-full"
+                                >
                                     <SidebarMenuButton asChild>
                                         <Link
                                             to={item.url}
                                             onClick={toggleSidebar}
                                         >
                                             <item.icon />
-                                            <span><h4>{item.title}</h4></span>
+                                            <span>
+                                                <h4>{item.title}</h4>
+                                            </span>
                                         </Link>
                                     </SidebarMenuButton>
                                 </SidebarMenuItem>
