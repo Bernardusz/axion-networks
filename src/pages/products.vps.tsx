@@ -1,7 +1,28 @@
 import MainCard from "@/components/privateComponent/mainCard";
 import TitleParagraph from "@/components/privateComponent/titleParagraph";
 import CallToAction from "@/components/staticComponent/callToAction";
+import { useHead } from "@unhead/react";
 const ProductsVpsPage = () => {
+	useHead({
+		title: "Products - VPS | Axion Networks",
+		meta: [
+			{ name: "description", content: "VPS Products - Virtual Private Server | A VPS deploymet for you to deploy your app." },
+			{ name: "viewport", content: "width=device-width, initial-scale=1" },
+			{ name: "robots", content: "index, follow" },
+
+			// Open Graph (Social sharing)
+			{ property: "og:title", content: "Products - VPS | Axion Networks" },
+			{ property: "og:description", content: "VPS Products - Virtual Private Server | A VPS deploymet for you to deploy your app." },
+			{ property: "og:type", content: "website" },
+			// Twitter Card
+			{ name: "twitter:card", content: "summary_large_image" },
+			{ name: "twitter:title", content: "Products - VPS | Axion Networks" },
+			{ name: "twitter:description", content: "VPS Products - Virtual Private Server | A VPS deploymet for you to deploy your app." },
+		],
+		link: [
+			{ rel: "icon", type: "image/png", href: "/icon/Axion Icon.svg" },
+		],
+		});
     return (
         <div className="page">
             <section className="section w-full">

@@ -6,9 +6,30 @@ import useMode from "@/context/useMode";
 import FlexSection from "@/components/section/flexSection";
 import CallToAction from "@/components/staticComponent/callToAction";
 import { Link } from "react-router-dom";
+import { useHead } from "@unhead/react";
 
 const ProductsPage = () => {
     const mode = useMode(state => state.mode);
+	useHead({
+		title: "Products | Axion Networks",
+		meta: [
+			{ name: "description", content: "VPS Products | A VPS deploymet for you to deploy your app." },
+			{ name: "viewport", content: "width=device-width, initial-scale=1" },
+			{ name: "robots", content: "index, follow" },
+
+			// Open Graph (Social sharing)
+			{ property: "og:title", content: "Products | Axion Networks" },
+			{ property: "og:description", content: "VPS Products | A VPS deploymet for you to deploy your app." },
+			{ property: "og:type", content: "website" },
+			// Twitter Card
+			{ name: "twitter:card", content: "summary_large_image" },
+			{ name: "twitter:title", content: "Products | Axion Networks" },
+			{ name: "twitter:description", content: "VPS Products | A VPS deploymet for you to deploy your app." },
+		],
+		link: [
+			{ rel: "icon", type: "image/png", href: "/icon/Axion Icon.svg" },
+		],
+		});
     return (
         <div className="page mt-20">
             <section className="section flex flex-col items-center justify-center gap-8">

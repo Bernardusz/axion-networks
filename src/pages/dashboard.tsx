@@ -9,6 +9,7 @@ import { SectionCards } from "@/components/ui/section-cards";
 import { useState } from "react";
 import { CardHeader } from "@/components/ui/card";
 import GridSection from "@/components/section/gridSection";
+import { useHead } from "@unhead/react"
 
 export type Application = {
     id: string;
@@ -72,6 +73,26 @@ const DashboardPage = () => {
         if (targetPage > totalPage) return;
         setPage(targetPage);
     };
+	useHead({
+		title: "Dashboard | Axion Networks",
+		meta: [
+			{ name: "description", content: "A dashboard to manage all your apps and deployments." },
+			{ name: "viewport", content: "width=device-width, initial-scale=1" },
+			{ name: "robots", content: "index, follow" },
+
+			// Open Graph (Social sharing)
+			{ property: "og:title", content: "Dashboard | Axion Networks" },
+			{ property: "og:description", content: "A dashboard to manage all your apps and deployments." },
+			{ property: "og:type", content: "website" },
+			// Twitter Card
+			{ name: "twitter:card", content: "summary_large_image" },
+			{ name: "twitter:title", content: "Dashboard | Axion Networks" },
+			{ name: "twitter:description", content: "A dashboard to manage all your apps and deployments." },
+		],
+		link: [
+			{ rel: "icon", type: "image/png", href: "/icon/Axion Icon.svg" },
+		],
+		});
 
     return (
         <div className="flex flex-1 flex-col w-full">

@@ -4,9 +4,30 @@ import FlexSection from "@/components/section/flexSection";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import { useHead } from "@unhead/react";
 
 const PricingPage = () => {
     const [anually, setAnually] = useState<boolean>(true);
+	useHead({
+		title: "Pricing | Axion Networks",
+		meta: [
+			{ name: "description", content: "VPS Pricing | A VPS deployment for you to deploy your app." },
+			{ name: "viewport", content: "width=device-width, initial-scale=1" },
+			{ name: "robots", content: "index, follow" },
+
+			// Open Graph (Social sharing)
+			{ property: "og:title", content: "Pricing | Axion Networks" },
+			{ property: "og:description", content: "VPS Pricing | A VPS deployment for you to deploy your app." },
+			{ property: "og:type", content: "website" },
+			// Twitter Card
+			{ name: "twitter:card", content: "summary_large_image" },
+			{ name: "twitter:title", content: "Pricing | Axion Networks" },
+			{ name: "twitter:description", content: "VPS Pricing | A VPS deployment for you to deploy your app." },
+		],
+		link: [
+			{ rel: "icon", type: "image/png", href: "/icon/Axion Icon.svg" },
+		],
+		});
     return (
         <div className="page">
             <section className="section mt-[20vh] flex flex-col items-center justify-center gap-8">
