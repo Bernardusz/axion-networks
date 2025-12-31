@@ -10,26 +10,41 @@ import { useHead } from "@unhead/react";
 
 const ProductsPage = () => {
     const mode = useMode(state => state.mode);
-	useHead({
-		title: "Products | Axion Networks",
-		meta: [
-			{ name: "description", content: "VPS Products | A VPS deploymet for you to deploy your app." },
-			{ name: "viewport", content: "width=device-width, initial-scale=1" },
-			{ name: "robots", content: "index, follow" },
+    useHead({
+        title: "Products | Axion Networks",
+        meta: [
+            {
+                name: "description",
+                content:
+                    "VPS Products | A VPS deployment for you to deploy your app.",
+            },
+            {
+                name: "viewport",
+                content: "width=device-width, initial-scale=1",
+            },
+            { name: "robots", content: "index, follow" },
 
-			// Open Graph (Social sharing)
-			{ property: "og:title", content: "Products | Axion Networks" },
-			{ property: "og:description", content: "VPS Products | A VPS deploymet for you to deploy your app." },
-			{ property: "og:type", content: "website" },
-			// Twitter Card
-			{ name: "twitter:card", content: "summary_large_image" },
-			{ name: "twitter:title", content: "Products | Axion Networks" },
-			{ name: "twitter:description", content: "VPS Products | A VPS deploymet for you to deploy your app." },
-		],
-		link: [
-			{ rel: "icon", type: "image/png", href: "/icon/Axion Icon.svg" },
-		],
-		});
+            // Open Graph (Social sharing)
+            { property: "og:title", content: "Products | Axion Networks" },
+            {
+                property: "og:description",
+                content:
+                    "VPS Products | A VPS deployment for you to deploy your app.",
+            },
+            { property: "og:type", content: "website" },
+            // Twitter Card
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:title", content: "Products | Axion Networks" },
+            {
+                name: "twitter:description",
+                content:
+                    "VPS Products | A VPS deployment for you to deploy your app.",
+            },
+        ],
+        link: [
+            { rel: "icon", type: "image/png", href: "/icon/Axion Icon.svg" },
+        ],
+    });
     return (
         <div className="page mt-20">
             <section className="section flex flex-col items-center justify-center gap-8">
@@ -53,29 +68,27 @@ const ProductsPage = () => {
             <section className="section flex w-full flex-col gap-8 xl:w-4/5">
                 <h3>Who is this for</h3>
                 <div className="flex w-full flex-col justify-between gap-6 md:flex-row md:gap-16">
-					<TitleParagraph
-						className="w-full md:w-1/3"
-						title="Just starting out"
-						text="Push your code and let us handle the rest."
-					/>
-					<TitleParagraph
-						className="w-full md:w-1/3"
-
-						title="Growing projects"
-						text="Balance control and simplicity with a modern control panel."
-					/>
                     <TitleParagraph
-						className="w-full md:w-1/3"
-
-						title="Power users"
-						text="Full root access. No restrictions"
-					/>
+                        className="w-full md:w-1/3"
+                        title="Just starting out"
+                        text="Push your code and let us handle the rest."
+                    />
+                    <TitleParagraph
+                        className="w-full md:w-1/3"
+                        title="Growing projects"
+                        text="Balance control and simplicity with a modern control panel."
+                    />
+                    <TitleParagraph
+                        className="w-full md:w-1/3"
+                        title="Power users"
+                        text="Full root access. No restrictions"
+                    />
                 </div>
             </section>
 
             <section className="section flex w-full flex-col gap-16 xl:w-4/5">
                 <TitleParagraph
-					variant="h3"
+                    variant="h3"
                     title="Deploy with no limitation"
                     text="We don't decide how you host your apps, you do. Your apps - Your needs - Your way"
                 />
@@ -118,28 +131,25 @@ const ProductsPage = () => {
                     />
                 </Link>
             </FlexSection>
-            <section className="section w-full flex flex-col gap-8">
+            <section className="section flex w-full flex-col gap-8">
                 <h3>Why People Trust Us</h3>
                 <div className="flex w-full flex-col justify-between gap-6 md:flex-row md:gap-16">
-					<TitleParagraph
-						className="w-full md:w-1/3"
-
-						title="No vendor lock-in"
-						text="Your infrastructure stays portable."
-					/>
-					<TitleParagraph
-						className="w-full md:w-1/3"
-
-						title="Transparent pricing"
-						text="No hidden limits, no surprise fees."
-					/>
-					<TitleParagraph
-						className="w-full md:w-1/3"
-
-						title="Built for developers"
-						text="Amazing Developer Experience, for all kind of applications"
-					/>
-				</div>
+                    <TitleParagraph
+                        className="w-full md:w-1/3"
+                        title="No vendor lock-in"
+                        text="Your infrastructure stays portable."
+                    />
+                    <TitleParagraph
+                        className="w-full md:w-1/3"
+                        title="Transparent pricing"
+                        text="No hidden limits, no surprise fees."
+                    />
+                    <TitleParagraph
+                        className="w-full md:w-1/3"
+                        title="Built for developers"
+                        text="Amazing Developer Experience, for all kind of applications"
+                    />
+                </div>
             </section>
 
             <CallToAction />

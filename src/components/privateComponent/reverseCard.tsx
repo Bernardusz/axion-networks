@@ -45,7 +45,7 @@ const ReverseCard = ({
                 <img
                     src={imageSrc}
                     className="aspect-video max-h-64 min-w-full object-cover"
-					alt={imageAlt}
+                    alt={imageAlt}
                 />
             </CardContent>
         </Card>

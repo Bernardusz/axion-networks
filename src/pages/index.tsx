@@ -13,26 +13,38 @@ import { useHead } from "@unhead/react";
 
 const HomePage = () => {
     const navigate = useNavigate();
-	useHead({
-		title: "Axion Networks",
-		meta: [
-			{ name: "description", content: "A VPS deployment for you to deploy your app." },
-			{ name: "viewport", content: "width=device-width, initial-scale=1" },
-			{ name: "robots", content: "index, follow" },
+    useHead({
+        title: "Axion Networks",
+        meta: [
+            {
+                name: "description",
+                content: "A VPS deployment for you to deploy your app.",
+            },
+            {
+                name: "viewport",
+                content: "width=device-width, initial-scale=1",
+            },
+            { name: "robots", content: "index, follow" },
 
-			// Open Graph (Social sharing)
-			{ property: "og:title", content: "Axion Networks" },
-			{ property: "og:description", content: "A VPS deployment for you to deploy your app." },
-			{ property: "og:type", content: "website" },
-			// Twitter Card
-			{ name: "twitter:card", content: "summary_large_image" },
-			{ name: "twitter:title", content: "Axion Networks" },
-			{ name: "twitter:description", content: "A VPS deployment for you to deploy your app." },
-		],
-		link: [
-			{ rel: "icon", type: "image/png", href: "/icon/Axion Icon.svg" },
-		],
-		});
+            // Open Graph (Social sharing)
+            { property: "og:title", content: "Axion Networks" },
+            {
+                property: "og:description",
+                content: "A VPS deployment for you to deploy your app.",
+            },
+            { property: "og:type", content: "website" },
+            // Twitter Card
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:title", content: "Axion Networks" },
+            {
+                name: "twitter:description",
+                content: "A VPS deployment for you to deploy your app.",
+            },
+        ],
+        link: [
+            { rel: "icon", type: "image/png", href: "/icon/Axion Icon.svg" },
+        ],
+    });
     return (
         <div className="page">
             <section className="from-background via-primary dark:via-secondary to-background mb-16 flex h-[80vh] w-full flex-col items-center justify-center gap-8 bg-linear-to-br from-25% via-50% to-75% p-24">
@@ -92,7 +104,7 @@ const HomePage = () => {
 
             <section className="section w-full">
                 <TitleParagraph
-					variant="h3"
+                    variant="h3"
                     title="Choose how much control"
                     text="Axion Networks is a VPS Company that gives you the control to decide your need. You decide your need not us."
                 />
@@ -137,7 +149,7 @@ const HomePage = () => {
             </FlexSection>
             <section className="section w-full">
                 <TitleParagraph
-					variant="h3"
+                    variant="h3"
                     title="Robust and Secure Infrastructure"
                     text="Making sure you can Deploy and Secure your apps at ease. Scale your apps and products without any problem."
                 />

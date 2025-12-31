@@ -54,12 +54,12 @@ const DefaultLayout = () => {
             </SidebarInset>
         </SidebarProvider>
     ) : (
-		<SidebarProvider className="page">
-			<Header />
+        <SidebarProvider className="page">
+            <Header />
             <Outlet />
             <Toaster />
             <Footer />
-		</SidebarProvider>
+        </SidebarProvider>
     );
 };
 

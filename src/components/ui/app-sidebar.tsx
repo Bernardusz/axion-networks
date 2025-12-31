@@ -103,9 +103,9 @@ import { Link } from "react-router-dom";
 // import { useIsMobile } from "@/hooks/use-mobile";
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     // const isMobile = useIsMobile();
-	const mode = useMode(state => state.mode);
-	const toggleMode = useMode(state => state.toggleMode);
-	return (
+    const mode = useMode(state => state.mode);
+    const toggleMode = useMode(state => state.toggleMode);
+    return (
         <Sidebar collapsible="offcanvas" {...props}>
             <SidebarHeader>
                 <SidebarMenu>
@@ -124,9 +124,19 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                                 </span>
                             </Link>
                         </SidebarMenuButton>
-						<div className="w-20 flex justify-center items-center">
-							{mode === "light" ? <CiSun className="text-foreground size-8" onClick={toggleMode}/> : <CiCloudMoon className="text-foreground size-8" onClick={toggleMode}/>}
-						</div>
+                        <div className="flex w-20 items-center justify-center">
+                            {mode === "light" ? (
+                                <CiSun
+                                    className="text-foreground size-8"
+                                    onClick={toggleMode}
+                                />
+                            ) : (
+                                <CiCloudMoon
+                                    className="text-foreground size-8"
+                                    onClick={toggleMode}
+                                />
+                            )}
+                        </div>
                     </SidebarMenuItem>
                 </SidebarMenu>
             </SidebarHeader>
