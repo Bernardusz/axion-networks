@@ -118,7 +118,7 @@ const DashboardPage = () => {
                         <div></div>
                         {tab === "GID-cPanel" ? (
                             <PaginatedTable
-                                className="max-w-full"
+                                className="max-w-full overflow-hidden"
                                 title="Applications"
                                 description="Deployed applications"
                                 applications={paginatedData}

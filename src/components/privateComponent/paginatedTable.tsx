@@ -34,8 +34,8 @@ type paginatedTableProps = {
 };
 
 const style = {
-    th: "px-4  py-2 text-left text-sm font-semibold bg-muted border-b",
-    td: "px-2 py-2 text-sm border-b",
+    th: "px-2 sm:px-4  py-2 text-left text-sm font-semibold bg-muted border-b",
+    td: "px-1 sm:px-2 py-2 text-sm border-b",
 };
 
 const PaginatedTable = ({
