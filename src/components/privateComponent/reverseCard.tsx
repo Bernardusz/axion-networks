@@ -42,7 +42,11 @@ const ReverseCard = ({
                 <CardAction>{action}</CardAction>
             </CardHeader>
             <CardContent>
-                <img src={imageSrc} alt={imageAlt} />
+                <img
+                    src={imageSrc}
+                    className="aspect-video max-h-64 min-w-full object-cover"
+					alt={imageAlt}
+                />
             </CardContent>
         </Card>
     );

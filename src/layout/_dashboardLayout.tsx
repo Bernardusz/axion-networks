@@ -20,12 +20,12 @@ const DashboardLayout = () => {
             <AppSidebar variant="inset" side={isMobile ? "right" : "left"} />
             <SidebarInset>
                 <SiteHeader />
-
-                <main>
-                    <Outlet />
-                </main>
-            	<Footer />
-
+                <div className="flex flex-col items-center justify-center">
+                    <main className="flex h-fit w-full flex-col overflow-hidden">
+                        <Outlet />
+                    </main>
+                    <Footer />
+                </div>
             </SidebarInset>
         </SidebarProvider>
     );

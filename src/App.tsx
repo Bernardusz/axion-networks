@@ -40,15 +40,15 @@ function App() {
                 </Route>
                 <Route element={<DefaultLayout />}>
                     {/* <Route element={<PublicOnlyRoute />}> Only if you're plugging Auth */}
-                        <Route path="login" element={<LoginPage />} />
-                        <Route path="signup" element={<SignUpPage />} />
+                    <Route path="login" element={<LoginPage />} />
+                    <Route path="signup" element={<SignUpPage />} />
                     {/* </Route> */}
                 </Route>
 
                 {/* <Route element={<ProtectedRoute />}> Only if you're plugging Auth */}
-                    <Route path="dashboard" element={<DashboardLayout />}>
-                        <Route index element={<DashboardPage />} />
-                    </Route>
+                <Route path="dashboard" element={<DashboardLayout />}>
+                    <Route index element={<DashboardPage />} />
+                </Route>
                 {/* </Route> */}
             </Routes>
         </BrowserRouter>

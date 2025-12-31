@@ -6,6 +6,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+import type { JSX } from "react";
 
 export type mainCardProps = {
     imageSrc?: string;
@@ -15,6 +16,7 @@ export type mainCardProps = {
     action?: React.ReactNode;
     type: "flex-col" | "flex-row";
     className?: string;
+    extraComponent?: JSX.Element;
 };
 
 const MainCard = ({
@@ -25,6 +27,7 @@ const MainCard = ({
     action,
     type,
     className,
+    extraComponent,
     ...props
 }: mainCardProps) => {
     return (
@@ -34,7 +37,11 @@ const MainCard = ({
         >
             {imageSrc && (
                 <CardContent>
-                    <img src={imageSrc} alt={imageAlt} />
+                    <img
+                        src={imageSrc}
+                        className="aspect-video max-h-64 min-w-full object-cover"
+                        alt={imageAlt}
+                    />
                 </CardContent>
             )}
             <CardHeader className={`flex ${type} w-full justify-between gap-4`}>
@@ -45,6 +52,7 @@ const MainCard = ({
                     <CardDescription>
                         <p>{text}</p>
                     </CardDescription>
+                    {extraComponent}
                 </div>
                 <CardAction
                     className={`items-end justify-end ${type === "flex-row" ? "pt-8 pr-4" : "w-full"}`}

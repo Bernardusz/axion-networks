@@ -99,8 +99,7 @@ import AxionIcon from "@/assets/Axion Icon.svg?react";
 import { Link } from "react-router-dom";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-
-	return (
+    return (
         <Sidebar collapsible="offcanvas" {...props}>
             <SidebarHeader>
                 <SidebarMenu>
@@ -111,7 +110,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                         >
                             <Link
                                 to="/"
-								
                                 className="flex h-10 flex-row items-center"
                             >
                                 <AxionIcon className="text-foreground size-16" />

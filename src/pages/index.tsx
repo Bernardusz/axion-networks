@@ -8,10 +8,10 @@ import CallToAction from "@/components/staticComponent/callToAction";
 import { AccordionContent, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionItem } from "@radix-ui/react-accordion";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const HomePage = () => {
-    // const toggleMode = useMode((state) => state.toggleMode)
+    const navigate = useNavigate();
     return (
         <div className="page">
             <section className="from-background via-primary dark:via-secondary to-background mb-16 flex h-[80vh] w-full flex-col items-center justify-center gap-8 bg-linear-to-br from-25% via-50% to-75% p-24">
@@ -21,8 +21,18 @@ const HomePage = () => {
                     apps, projects, and businesses.
                 </p>
                 <div className="flex w-full flex-row justify-center gap-16 px-8">
-                    <Button className="btn-primary">Host Now</Button>
-                    <Button className="btn-primary">Learn More</Button>
+                    <Button
+                        className="btn-primary"
+                        onClick={() => navigate("/dashboard")}
+                    >
+                        Host Now
+                    </Button>
+                    <Button
+                        className="btn-primary"
+                        onClick={() => navigate("/products")}
+                    >
+                        Learn More
+                    </Button>
                 </div>
             </section>
 
@@ -32,22 +42,22 @@ const HomePage = () => {
 
                 <div className="grid w-[120vw] translate-x-[4vw] grid-flow-dense auto-rows-[160px] grid-cols-4 gap-6">
                     <img
-                        src="/public/images/pexels-joshsorenson-1054397.jpg"
+                        src="/public/images/krzysztof-kowalik-KiH2-tdGQRY-unsplash.jpg"
                         alt=""
                         className="bento-image col-span-2 col-start-2 row-span-1 row-start-2"
                     />
                     <img
-                        src="/public/images/pexels-joshsorenson-1054397.jpg"
+                        src="/public/images/taylor-vick-M5tzZtFCOfs-unsplash.jpg"
                         alt=""
                         className="bento-image col-span-3 row-span-1"
                     />
                     <img
-                        src="/public/images/pexels-joshsorenson-1054397.jpg"
+                        src="/public/images/modern-data-center-providing-cloud-services-enabling-businesses-access-computing-resources-storage-demand-internet-server-room-infrastructure-3d-render-animation.jpg"
                         alt=""
                         className="bento-image col-span-1 row-span-3"
                     />
                     <img
-                        src="/public/images/pexels-joshsorenson-1054397.jpg"
+                        src="/public/images/matthieu-beaumont-iYnpYeyu57k-unsplash.jpg"
                         alt=""
                         className="bento-image col-span-1 row-span-2"
                     />
@@ -61,43 +71,44 @@ const HomePage = () => {
 
             <section className="section w-full">
                 <TitleParagraph
+					variant="h3"
                     title="Choose how much control"
                     text="Axion Networks is a VPS Company that gives you the control to decide your need. You decide your need not us."
                 />
             </section>
             <FlexSection>
                 <MainCard
-                    imageSrc="/images/abstract-cybersecurity-concept-design.jpg"
+                    imageSrc="/images/website-hosting-concept-with-circuits.jpg"
                     imageAlt="an img"
                     title="Git Integrated Development"
                     text="Immediately deploy your app as soon as it’s finished. No worries about config, Nginx, Linux or Reverse Proxies. Everything is handled for you"
                     action={
                         <NavLink to="/products" className="link-primary">
-                            Learn More
+                            Learn More →
                         </NavLink>
                     }
                     type="flex-col"
                 />
                 <MainCard
-                    imageSrc="/images/abstract-cybersecurity-concept-design.jpg"
+                    imageSrc="/images/cropped-image-businessman-sitting-by-table-cafe-analyzing-indicators-laptop-computer-while-using-wristwatch.jpg"
                     imageAlt="an img"
-                    title="Git Integrated Development"
-                    text="Immediately deploy your app as soon as it’s finished. No worries about config, Nginx, Linux or Reverse Proxies. Everything is handled for you"
+                    title="cPanel - Control Panel"
+                    text="An easy and intuitive Linux based Graphical User Interface for your apps. Perfect for the middle-ground between Easiness and Control."
                     action={
                         <NavLink to="/products" className="link-primary">
-                            Learn More
+                            Learn More →
                         </NavLink>
                     }
                     type="flex-col"
                 />
                 <MainCard
-                    imageSrc="/images/abstract-cybersecurity-concept-design.jpg"
+                    imageSrc="/images/matthieu-beaumont-iYnpYeyu57k-unsplash.jpg"
                     imageAlt="an img"
-                    title="Git Integrated Development"
-                    text="Immediately deploy your app as soon as it’s finished. No worries about config, Nginx, Linux or Reverse Proxies. Everything is handled for you"
+                    title="Virtual Private Server"
+                    text="A Linux based computer on the cloud, Secure and Robust for all your needs. Tweak the configs and server with total control in your hands"
                     action={
                         <NavLink to="/products" className="link-primary">
-                            Learn More
+                            Learn More →
                         </NavLink>
                     }
                     type="flex-col"
@@ -105,19 +116,32 @@ const HomePage = () => {
             </FlexSection>
             <section className="section w-full">
                 <TitleParagraph
+					variant="h3"
                     title="Robust and Secure Infrastructure"
                     text="Making sure you can Deploy and Secure your apps at ease. Scale your apps and products without any problem."
                 />
             </section>
             <FlexSection>
                 <ReverseCard
-                    title="Security First"
-                    text="Extensive security and Firewall are set up to make sure your apps and products are safe. No compromise guaranteed."
-                    imageSrc="/images/abstract-cybersecurity-concept-design.jpg"
+                    title="Robust Performance"
+                    text="Optimized servers and computers on the cloud to make sure your apps can handle users traffic and scalability without any issues."
+                    imageSrc="/images/massimo-botturi-zFYUsLk_50Y-unsplash.jpg"
                     imageAlt="an img"
                     action={
                         <NavLink to="/products" className="link-primary">
-                            Learn More
+                            Learn More →
+                        </NavLink>
+                    }
+                    type="flex-col"
+                />
+                <ReverseCard
+                    title="Analytics & Datas"
+                    text="Visitors, Traffics and Problems are recorded every single day, so you can understand your customers and your needs better. "
+                    imageSrc="/images/pexels-kevin-ku-92347-577585.jpg"
+                    imageAlt="an img"
+                    action={
+                        <NavLink to="/products" className="link-primary">
+                            Learn More →
                         </NavLink>
                     }
                     type="flex-col"
@@ -129,19 +153,7 @@ const HomePage = () => {
                     imageAlt="an img"
                     action={
                         <NavLink to="/products" className="link-primary">
-                            Learn More
-                        </NavLink>
-                    }
-                    type="flex-col"
-                />
-                <ReverseCard
-                    title="Security First"
-                    text="Extensive security and Firewall are set up to make sure your apps and products are safe. No compromise guaranteed."
-                    imageSrc="/images/abstract-cybersecurity-concept-design.jpg"
-                    imageAlt="an img"
-                    action={
-                        <NavLink to="/products" className="link-primary">
-                            Learn More
+                            Learn More →
                         </NavLink>
                     }
                     type="flex-col"
@@ -189,7 +201,7 @@ const HomePage = () => {
                     />
                 </Carousel>
             </section>
-            <section className="section flex flex-col gap-8">
+            <section className="section flex w-full flex-col justify-start gap-8">
                 <h3>Frequently Asked Questions</h3>
                 <Accordion
                     type="single"

@@ -28,14 +28,14 @@ interface comboBoxProps<T extends string> {
     choices: choicesType[];
     setState: React.Dispatch<React.SetStateAction<T>>;
     state: T;
-	className?: string
+    className?: string;
 }
 
 const ComboBox = <T extends string>({
     choices,
     setState,
     state,
-	className
+    className,
 }: comboBoxProps<T>) => {
     const [open, setOpen] = React.useState(false);
     //   const [value, setValue] = React.useState("")

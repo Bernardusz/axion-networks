@@ -17,7 +17,6 @@ export function NavMain({
         url: string;
         icon?: Icon;
     }[];
-
 }) {
     const navigate = useNavigate();
     return (
@@ -31,7 +30,9 @@ export function NavMain({
                         <SidebarMenuItem key={item.title}>
                             <SidebarMenuButton
                                 tooltip={item.title}
-                                onClick={() => {navigate(item.url)}}
+                                onClick={() => {
+                                    navigate(item.url);
+                                }}
                             >
                                 {item.icon && <item.icon />}
                                 <span>{item.title}</span>

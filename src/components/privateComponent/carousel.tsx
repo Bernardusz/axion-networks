@@ -5,7 +5,10 @@ import ArrowDark from "@/assets/CarouselArrow - D.svg?react";
 import ArrowLight from "@/assets/CarouselArrow - L.svg?react";
 import useMode from "@/context/useMode";
 const Carousel = ({ children }: { children: React.ReactNode }) => {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+    const [emblaRef, emblaApi] = useEmblaCarousel(
+        { loop: true, align: "center" },
+        [Autoplay()]
+    );
 
     const scrollPrev = useCallback(() => {
         if (emblaApi) emblaApi.scrollPrev();
@@ -18,15 +21,18 @@ const Carousel = ({ children }: { children: React.ReactNode }) => {
 
     return (
         <div
-            className="embla flex flex-col gap-8 overflow-hidden"
+            className="embla flex flex-col gap-4 overflow-hidden"
             ref={emblaRef}
         >
-            <div className="embla__container flex gap-8">
+            <div className="embla__container -ml-8 flex">
                 {React.Children.map(children, (child, index) => {
                     // Ensure the child is a valid React element before cloning
                     if (React.isValidElement(child)) {
                         return (
-                            <div className="embla__slide flex-1" key={index}>
+                            <div
+                                className="embla__slide flex-[0_0_100%] pl-8 md:flex-[0_0_50%]"
+                                key={index}
+                            >
                                 {React.cloneElement(child)}
                             </div>
                         );

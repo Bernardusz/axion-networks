@@ -155,7 +155,7 @@ export function PublicSidebar({
     ...props
 }: React.ComponentProps<typeof Sidebar>) {
     const { toggleSidebar } = useSidebar();
-	const navigate = useNavigate();
+    const navigate = useNavigate();
     return (
         <Sidebar collapsible="offcanvas" {...props}>
             <SidebarHeader>
@@ -185,12 +185,10 @@ export function PublicSidebar({
                 <NavMain items={data.navMain} />
             </SidebarContent>
             <SidebarFooter>
-				<Button
-					onClick={() => navigate("/dashboard")}
-				>
-					Go to Dashboard
-				</Button>
-			</SidebarFooter>
+                <Button onClick={() => navigate("/dashboard")}>
+                    Go to Dashboard
+                </Button>
+            </SidebarFooter>
         </Sidebar>
     );
 }
