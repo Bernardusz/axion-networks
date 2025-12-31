@@ -1,13 +1,14 @@
 import AxionLogo from "@/assets/Axion Icon.svg?react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const Header = () => {
     const isMobile = useIsMobile();
+	const navigate = useNavigate();
     return (
-        <header className="bg-background text-foreground fixed top-0 left-0 z-50 flex h-24 w-full flex-row items-center justify-between border px-8">
-            <AxionLogo className="aspect-square h-16 w-16" />
+        <header className="bg-background text-foreground fixed top-0 left-0 z-50 flex h-24 w-full flex-row items-center justify-between border px-8 max-w-full">
+            <AxionLogo className="aspect-square h-16 w-16" onClick={() => navigate("/")}/>
             <nav className="hidden flex-row gap-4 md:flex">
                 <Link className="link-primary" to="/">
                     Home

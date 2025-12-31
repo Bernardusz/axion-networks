@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const ProductsPage = () => {
     const mode = useMode(state => state.mode);
     return (
-        <div className="page">
+        <div className="page mt-20">
             <section className="section flex flex-col items-center justify-center gap-8">
                 <h1 className="text-center">Choose how you deploy</h1>
                 <p>
@@ -32,25 +32,23 @@ const ProductsPage = () => {
             <section className="section flex w-full flex-col gap-8 xl:w-4/5">
                 <h3>Who is this for</h3>
                 <div className="flex w-full flex-col justify-between gap-6 md:flex-row md:gap-16">
-                    <div>
-                        <h4>Just starting out</h4>
-                        <p className="text-sm opacity-80">
-                            Push your code and let us handle the rest.
-                        </p>
-                    </div>
-                    <div>
-                        <h4>Growing projects</h4>
-                        <p className="text-sm opacity-80">
-                            Balance control and simplicity with a modern control
-                            panel.
-                        </p>
-                    </div>
-                    <div>
-                        <h4>Power users</h4>
-                        <p className="text-sm opacity-80">
-                            Full root access. No restrictions.
-                        </p>
-                    </div>
+					<TitleParagraph
+						className="w-full md:w-1/3"
+						title="Just starting out"
+						text="Push your code and let us handle the rest."
+					/>
+					<TitleParagraph
+						className="w-full md:w-1/3"
+
+						title="Growing projects"
+						text="Balance control and simplicity with a modern control panel."
+					/>
+                    <TitleParagraph
+						className="w-full md:w-1/3"
+
+						title="Power users"
+						text="Full root access. No restrictions"
+					/>
                 </div>
             </section>
 
@@ -64,7 +62,7 @@ const ProductsPage = () => {
             <FlexSection>
                 <Link to="gid">
                     <MainCard
-                        imageSrc="/images/scott-rodgerson-PSpf_XgOM5w-unsplash.jpg"
+                        imageSrc="/images/pexels-divinetechygirl-1181354.jpg"
                         imageAlt="an img"
                         title="Git Integrated Deployment"
                         text="Best for teams that deploy often"
@@ -76,7 +74,7 @@ const ProductsPage = () => {
                 </Link>
                 <Link to="cpanel">
                     <MainCard
-                        imageSrc="/images/scott-rodgerson-PSpf_XgOM5w-unsplash.jpg"
+                        imageSrc="/images/pexels-kevin-ku-92347-577585.jpg"
                         imageAlt="an img"
                         title="Control Panel"
                         text="Ideal if you want visibility without SSH"
@@ -99,28 +97,28 @@ const ProductsPage = () => {
                     />
                 </Link>
             </FlexSection>
-            <section className="section w-full">
+            <section className="section w-full flex flex-col gap-8">
                 <h3>Why People Trust Us</h3>
-                <ul className="mt-6 grid gap-4 md:grid-cols-3">
-                    <li>
-                        <h4>No vendor lock-in</h4>
-                        <p className="p-deemphasize">
-                            Your infrastructure stays portable.
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Transparent pricing</h4>
-                        <p className="p-deemphasize">
-                            No hidden limits, no surprise fees.
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Built for developers</h4>
-                        <p className="p-deemphasize">
-                            CLI-friendly, API-first, and automation-ready.
-                        </p>
-                    </li>
-                </ul>
+                <div className="flex w-full flex-col justify-between gap-6 md:flex-row md:gap-16">
+					<TitleParagraph
+						className="w-full md:w-1/3"
+
+						title="No vendor lock-in"
+						text="Your infrastructure stays portable."
+					/>
+					<TitleParagraph
+						className="w-full md:w-1/3"
+
+						title="Transparent pricing"
+						text="No hidden limits, no surprise fees."
+					/>
+					<TitleParagraph
+						className="w-full md:w-1/3"
+
+						title="Built for developers"
+						text="Amazing Developer Experience, for all kind of applications"
+					/>
+				</div>
             </section>
 
             <CallToAction />

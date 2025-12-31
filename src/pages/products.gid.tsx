@@ -43,35 +43,35 @@ const ProductsGidPage = () => {
                     type="flex-col"
 					/>
 					<MainCard
-						imageSrc="/images/ai-generated-8994400_1280.jpg"
+						imageSrc="/images/cropped-image-businessman-sitting-by-table-cafe-analyzing-indicators-laptop-computer-while-using-wristwatch.jpg"
 						imageAlt="An imagw"
 						title="Intuitive Dashboard"
 						text="Monitor deployments, traffic, and app activity at a glance—clear, fast, and stress-free."
 						type="flex-col"
 					/>
 					<MainCard
-						imageSrc="/images/ai-generated-8994400_1280.jpg"
+						imageSrc="/images/ai-generated-8211245_640.jpg"
 						imageAlt="An imagw"
 						title="Deploy in Seconds"
 						text="One click is all it takes. Your app goes live instantly, ready for the world."
 						type="flex-col"
 					/>
 					<MainCard
-						imageSrc="/images/ai-generated-8994400_1280.jpg"
+						imageSrc="/images/cloud-storage-background-remixed-from-public-domain-by-nasa.jpg"
 						imageAlt="An imagw"
 						title="Robust performance"
 						text="Simplicity never compromises performance. Scale confidently without bottlenecks."
 						type="flex-col"
 					/>
 					<MainCard
-						imageSrc="/images/ai-generated-8994400_1280.jpg"
+						imageSrc="/images/website-hosting-concept-with-circuits.jpg"
 						imageAlt="An imagw"
 						title="Environment variables"
 						text="Making sure your app variables are always secured and safe."
 						type="flex-col"
 					/>	
 					<MainCard
-						imageSrc="/images/ai-generated-8994400_1280.jpg"
+						imageSrc="/images/pexels-luis-gomes-166706-546819.jpg"
 						imageAlt="An imagw"
 						title="Automatic builds"
 						text="Automatically build your app for production every time you push."

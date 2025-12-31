@@ -15,7 +15,7 @@ import {
     PaginationNext,
     PaginationPrevious,
 } from "@/components/ui/pagination";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import type React from "react";
 import { Button } from "@/components/ui/button";
 
@@ -35,7 +35,7 @@ type paginatedTableProps = {
 
 const style = {
     th: "px-4 py-2 text-left text-sm font-semibold text-gray-600 bg-muted border-b",
-    td: "px-4 py-2 text-sm text-gray-800 border-b",
+    td: "px-2 py-2 text-sm text-gray-800 border-b",
 };
 
 const PaginatedTable = ({
@@ -48,7 +48,7 @@ const PaginatedTable = ({
     changePage,
     action,
 }: paginatedTableProps) => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     return (
         <Card className={className}>
             <CardHeader className="flex w-full flex-row items-center justify-between">
@@ -73,7 +73,7 @@ const PaginatedTable = ({
                         <tr
                             key={app.id}
                             className="transition hover:bg-gray-50"
-                            onClick={() => navigate(`/apps/${app.name}`)}
+                            // onClick={() => navigate(`/apps/${app.name}`)}
                         >
                             <td className={style.td + " text-right"}>
                                 {app.id}

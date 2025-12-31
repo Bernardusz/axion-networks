@@ -42,27 +42,27 @@ const HomePage = () => {
 
                 <div className="grid w-[120vw] translate-x-[4vw] grid-flow-dense auto-rows-[160px] grid-cols-4 gap-6">
                     <img
-                        src="/public/images/krzysztof-kowalik-KiH2-tdGQRY-unsplash.jpg"
+                        src="/images/krzysztof-kowalik-KiH2-tdGQRY-unsplash.jpg"
                         alt=""
                         className="bento-image col-span-2 col-start-2 row-span-1 row-start-2"
                     />
                     <img
-                        src="/public/images/taylor-vick-M5tzZtFCOfs-unsplash.jpg"
+                        src="/images/taylor-vick-M5tzZtFCOfs-unsplash.jpg"
                         alt=""
                         className="bento-image col-span-3 row-span-1"
                     />
                     <img
-                        src="/public/images/modern-data-center-providing-cloud-services-enabling-businesses-access-computing-resources-storage-demand-internet-server-room-infrastructure-3d-render-animation.jpg"
+                        src="/images/modern-data-center-providing-cloud-services-enabling-businesses-access-computing-resources-storage-demand-internet-server-room-infrastructure-3d-render-animation.jpg"
                         alt=""
                         className="bento-image col-span-1 row-span-3"
                     />
                     <img
-                        src="/public/images/matthieu-beaumont-iYnpYeyu57k-unsplash.jpg"
+                        src="/images/matthieu-beaumont-iYnpYeyu57k-unsplash.jpg"
                         alt=""
                         className="bento-image col-span-1 row-span-2"
                     />
                     <img
-                        src="/public/images/pexels-joshsorenson-1054397.jpg"
+                        src="/images/pexels-joshsorenson-1054397.jpg"
                         alt=""
                         className="bento-image col-span-2 row-span-1"
                     />

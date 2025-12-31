@@ -47,19 +47,19 @@ const DefaultLayout = () => {
             <SidebarInset>
                 <SiteHeader />
 
-                <main>
+                <main className="w-full">
                     <Outlet />
                 </main>
                 <Footer />
             </SidebarInset>
         </SidebarProvider>
     ) : (
-        <div className="page">
-            <Header />
+		<SidebarProvider className="page">
+			<Header />
             <Outlet />
             <Toaster />
             <Footer />
-        </div>
+		</SidebarProvider>
     );
 };
 

@@ -74,7 +74,7 @@ const DashboardPage = () => {
     };
 
     return (
-        <div className="flex flex-1 flex-col">
+        <div className="flex flex-1 flex-col w-full">
             <div className="@container/main flex flex-1 flex-col gap-2">
                 <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
                     <SectionCards />
@@ -85,6 +85,7 @@ const DashboardPage = () => {
                         <div></div>
                         {tab === "GID-cPanel" ? (
                             <PaginatedTable
+								className="max-w-full"
                                 title="Applications"
                                 description="Deployed applications"
                                 applications={paginatedData}

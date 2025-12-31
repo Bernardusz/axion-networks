@@ -13,7 +13,7 @@ const PricingPage = () => {
                 <h1 className="text-center">Pricing</h1>
                 <p>Pick how much power your apps need</p>
             </section>
-            <FlexSection className="px-16">
+            <FlexSection className="">
                 <PricingCard
                     title="Begginer"
                     text="Start building with confidence."
@@ -67,7 +67,7 @@ const PricingPage = () => {
                 />
             </FlexSection>
 
-            <section className="flex w-full justify-center px-16 xl:-mt-10">
+            <section className="flex w-full justify-center px-8 xl:-mt-10">
                 <MainCard
                     title="Enterprise"
                     text="Infrastructure that doesn’t blink"

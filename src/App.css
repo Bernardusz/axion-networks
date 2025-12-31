@@ -147,7 +147,7 @@
 
 @layer components {
     .page {
-        @apply flex h-fit w-full flex-col items-center justify-center overflow-hidden md:pt-20;
+        @apply flex h-fit w-full flex-col items-center justify-center overflow-hidden md:pt-4;
     }
     .p-deemphasize {
         @apply text-muted-foreground text-sm font-normal;
