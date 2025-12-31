@@ -1,14 +1,50 @@
+import { useHead } from "@unhead/react";
 const CreditsPage = () => {
+    useHead({
+        title: "Credits | Axion Networks",
+        meta: [
+            {
+                name: "description",
+                content:
+                    "Credits for all images I used | A VPS deployment for you to deploy your app.",
+            },
+            {
+                name: "viewport",
+                content: "width=device-width, initial-scale=1",
+            },
+            { name: "robots", content: "index, follow" },
+
+            // Open Graph (Social sharing)
+            { property: "og:title", content: "Credits | Axion Networks" },
+            {
+                property: "og:description",
+                content:
+                    "Credits for all images I used | A VPS deployment for you to deploy your app.",
+            },
+            { property: "og:type", content: "website" },
+            // Twitter Card
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:title", content: "Credits | Axion Networks" },
+            {
+                name: "twitter:description",
+                content:
+                    "Credits for all images I used | A VPS deployment for you to deploy your app.",
+            },
+        ],
+        link: [
+            { rel: "icon", type: "image/png", href: "/icon/Axion Icon.svg" },
+        ],
+    });
     return (
-        <div className="page justify-center gap-4 xl:pt-30 mb-16">
-            <section className="flex flex-col gap-2 section justify-center">
+        <div className="page mb-16 justify-center gap-4 xl:pt-30">
+            <section className="section flex flex-col justify-center gap-2">
                 <h1 className="text-center">Credits</h1>
                 <p>
                     Credits for all the images I used, respect and thanks for
                     these guys.
                 </p>
             </section>
-            <div className="flex flex-col gap-4 text-center link-primary">
+            <div className="link-primary flex flex-col gap-4 text-center">
                 <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -198,8 +234,8 @@ const CreditsPage = () => {
                         Unsplash
                     </a>
                 </p>{" "}
-				<p>
-					Photo by
+                <p>
+                    Photo by
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -215,11 +251,10 @@ const CreditsPage = () => {
                     >
                         Unsplash
                     </a>
-				</p>
+                </p>
             </div>
         </div>
     );
-	
 };
 
 export default CreditsPage;
