@@ -29,7 +29,7 @@ const PricingPage = () => {
 		],
 		});
     return (
-        <div className="page">
+        <div className="page mb-16">
             <section className="section mt-[20vh] flex flex-col items-center justify-center gap-8">
                 <h1 className="text-center">Pricing</h1>
                 <p>Pick how much power your apps need</p>
