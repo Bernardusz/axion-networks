@@ -11,7 +11,7 @@ const Footer = () => {
                     </div>
                     <p>A secure and robust VPS with 100% uptime.</p>
                 </div>
-                <div className="flex w-1/2 flex-col justify-between gap-8 px-16 xl:flex-row xl:gap-16">
+                <div className="flex flex-col justify-between gap-8 md:w-full md:flex-row xl:w-1/2 xl:gap-16 xl:px-16">
                     <div className="flex flex-col gap-4">
                         <h4>Pricing</h4>
                         <nav>

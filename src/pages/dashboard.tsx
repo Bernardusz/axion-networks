@@ -1,4 +1,6 @@
-import ComboBox, { type choicesType } from "@/components/privateComponent/comboBox";
+import ComboBox, {
+    type choicesType,
+} from "@/components/privateComponent/comboBox";
 import PaginatedTable from "@/components/privateComponent/paginatedTable";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
@@ -52,79 +54,79 @@ export const applications = Array.from({ length: TOTAL_APPS }, (_, i) =>
 );
 
 const choices: choicesType[] = [
-	{value: "GID-cPanel", label: "GID-cPanel"},
-	{value: "VPS", label: "VPS"}
-]
+    { value: "GID-cPanel", label: "GID-cPanel" },
+    { value: "VPS", label: "VPS" },
+];
 
 const DashboardPage = () => {
-	const [tab, setTab] = useState<"GID-cPanel" | "VPS">("GID-cPanel");
-	const [page, setPage] = useState(1)
-	const pageSize = 10
-	const totalPage = Math.ceil(applications.length / pageSize);
-	const start = (page - 1) * pageSize
-	const end = start + pageSize
-	const paginatedData = applications.slice(start, end)
+    const [tab, setTab] = useState<"GID-cPanel" | "VPS">("GID-cPanel");
+    const [page, setPage] = useState(1);
+    const pageSize = 10;
+    const totalPage = Math.ceil(applications.length / pageSize);
+    const start = (page - 1) * pageSize;
+    const end = start + pageSize;
+    const paginatedData = applications.slice(start, end);
 
-	const changePage = (targetPage: number) => {
-		if (targetPage < 1) return;
-		if (targetPage > totalPage) return;
-		setPage(targetPage);
-	}
+    const changePage = (targetPage: number) => {
+        if (targetPage < 1) return;
+        if (targetPage > totalPage) return;
+        setPage(targetPage);
+    };
 
     return (
-        <div>
-            <div className="flex flex-1 flex-col">
-                <div className="@container/main flex flex-1 flex-col gap-2">
-                    <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
-						
-                        <SectionCards />
-                        <div className="px-4 lg:px-6">
-                            <ChartAreaInteractive />
-                        </div>
-						<div className="px-4 lg:px-6">
-							<div></div>
-							{tab === "GID-cPanel" ? (
-								<PaginatedTable
-									title="Applications"
-									description="Deployed applications"
-									applications={paginatedData}
-									totalPage={totalPage}
-									pageSize={pageSize}
-									start={start}
-									end={end}
-									currentPage={page}
-									changePage={changePage}
-									action={
-										<ComboBox<"GID-cPanel" | "VPS">
-											state={tab}
-											setState={setTab}
-											choices={choices}
-										/>
-								}
-								/>
-							): (
-								<Card className="flex flex-col">
-									<CardHeader className="flex flex-row justify-between items-center">
-										<div className="flex flex-col">
-											<CardTitle>Server Control</CardTitle>
-											<CardDescription>A few buttons to quickly control your VPS</CardDescription>
-										</div>
-										<ComboBox<"GID-cPanel" | "VPS">
-											state={tab}
-											setState={setTab}
-											choices={choices}
-										/>
-									</CardHeader>
-									<GridSection>
-										<Button>Shut Down</Button>
-										<Button>Restart</Button>
-										<Button>Monitor</Button>
-										<Button>Online Terminal</Button>
-									</GridSection>
-								</Card>
-							)}
-						</div>
-					</div>
+        <div className="flex flex-1 flex-col">
+            <div className="@container/main flex flex-1 flex-col gap-2">
+                <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
+                    <SectionCards />
+                    <div className="px-4 lg:px-6">
+                        <ChartAreaInteractive />
+                    </div>
+                    <div className="px-4 lg:px-6">
+                        <div></div>
+                        {tab === "GID-cPanel" ? (
+                            <PaginatedTable
+                                title="Applications"
+                                description="Deployed applications"
+                                applications={paginatedData}
+                                totalPage={totalPage}
+                                pageSize={pageSize}
+                                start={start}
+                                end={end}
+                                currentPage={page}
+                                changePage={changePage}
+                                action={
+                                    <ComboBox<"GID-cPanel" | "VPS">
+                                        state={tab}
+                                        setState={setTab}
+                                        choices={choices}
+                                    />
+                                }
+                            />
+                        ) : (
+                            <Card className="flex flex-col">
+                                <CardHeader className="flex flex-row items-center justify-between">
+                                    <div className="flex flex-col">
+                                        <CardTitle>Server Control</CardTitle>
+                                        <CardDescription>
+                                            A few buttons to quickly control
+                                            your VPS
+                                        </CardDescription>
+                                    </div>
+                                    <ComboBox<"GID-cPanel" | "VPS">
+                                        state={tab}
+                                        setState={setTab}
+                                        choices={choices}
+                                    />
+                                </CardHeader>
+                                <GridSection>
+                                    <Button>Shut Down</Button>
+                                    <Button>Restart</Button>
+                                    <Button>Monitor</Button>
+                                    <Button>Online Terminal</Button>
+                                </GridSection>
+                            </Card>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>

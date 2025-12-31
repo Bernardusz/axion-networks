@@ -167,9 +167,18 @@ export function ChartAreaInteractive() {
                 <CardTitle>Total Traffic</CardTitle>
                 <CardDescription>
                     <span className="hidden @[540px]/card:block">
-                        Total for the last {timeRange === "90d" ? "3 Months" : (timeRange === "30d" ? "1 Month" : (timeRange === "7d" ? "7 Days" : ""))}
+                        Total for the last{" "}
+                        {timeRange === "90d"
+                            ? "3 Months"
+                            : timeRange === "30d"
+                              ? "1 Month"
+                              : timeRange === "7d"
+                                ? "7 Days"
+                                : ""}
                     </span>
-                    <span className="@[540px]/card:hidden">Last {timeRange}</span>
+                    <span className="@[540px]/card:hidden">
+                        Last {timeRange}
+                    </span>
                 </CardDescription>
                 <CardAction>
                     <ToggleGroup

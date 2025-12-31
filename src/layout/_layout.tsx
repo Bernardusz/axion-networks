@@ -26,9 +26,10 @@ import { Toaster } from "sonner";
 import SiteHeader from "@/components/ui/site-header";
 
 // import Header from "@/components/staticComponent/header";
-import { AppSidebar } from "@/components/ui/app-sidebar";
+// import { AppSidebar } from "@/components/ui/app-sidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { PublicSidebar } from "@/components/staticComponent/publicSidebar";
 
 const DefaultLayout = () => {
     const isMobile = useIsMobile();
@@ -41,7 +42,8 @@ const DefaultLayout = () => {
                 } as React.CSSProperties
             }
         >
-            <AppSidebar variant="inset" side={isMobile ? "right" : "left"} />
+            {/* <AppSidebar variant="inset" side={isMobile ? "right" : "left"} /> */}
+            <PublicSidebar variant="inset" side={isMobile ? "right" : "left"} />
             <SidebarInset>
                 <SiteHeader />
 

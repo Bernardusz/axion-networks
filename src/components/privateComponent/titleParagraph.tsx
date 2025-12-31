@@ -10,7 +10,7 @@ const TitleParagraph = ({ title, text, className }: paragraphProps) => {
             className={`flex max-w-4/5 flex-col justify-items-start gap-4 ${className}`}
         >
             <h3 className="text-left">{title}</h3>
-            <p className="w-2/5">{text}</p>
+            <p>{text}</p>
         </div>
     );
 };
