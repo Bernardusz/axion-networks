@@ -17,13 +17,13 @@ import DashboardPage from "@/pages/dashboard";
 import "@/components/privateComponent/paginatedTable";
 
 function App() {
-    const mode = useMode(state => state.mode);
-    const toggleMode = useMode(state => state.toggleMode);
+    const isInitialized = useMode(state => state.isInitialized);
+    const initializeMode = useMode(state => state.initializeMode);
     useEffect(() => {
-        if (mode != "dark") {
-            toggleMode();
+        if (!isInitialized) {
+            initializeMode();
         }
-    }, [mode, toggleMode]);
+    }, [isInitialized, initializeMode]);
     return (
         <BrowserRouter>
             <Routes>

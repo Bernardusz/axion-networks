@@ -14,7 +14,7 @@ const SiteHeader = () => {
             <div className="flex w-full items-center gap-1 px-8 lg:gap-2 lg:px-6">
                 {location === "/" ? (
                     <AxionLogo
-                        className="size-8"
+                        className="size-8 text-foreground"
                         onClick={() => navigate("/")}
                     />
                 ) : (

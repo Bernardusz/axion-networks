@@ -1,13 +1,13 @@
 import AxionLogo from "@/assets/Axion Icon.svg?react";
 import { Link } from "react-router-dom";
 const Footer = () => {
-    return (
+	return(
         <footer className="w-full border-y flex justify-center flex-col items-center mt-16">
             <div className="flex w-full max-w-400 flex-col justify-center gap-4 p-12 mt-4">
 				<div className="flex h-fit w-full flex-col gap-6 xl:flex-row">
                 <div className="flex flex-col gap-2 xl:w-1/2">
                     <div className="flex flex-row items-center justify-start gap-2">
-                        <AxionLogo className="aspect-square size-10" />
+                        <AxionLogo className="aspect-square size-10 text-foreground" />
                         <h4>Axion Networks</h4>
                     </div>
                     <p>A secure and robust VPS with 100% uptime.</p>

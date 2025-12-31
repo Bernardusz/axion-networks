@@ -17,6 +17,7 @@ import { NavDocuments } from "@/components/ui/nav-documents";
 import { NavMain } from "@/components/ui/nav-main";
 import { NavSecondary } from "@/components/ui/nav-secondary";
 import { NavUser } from "@/components/ui/nav-user";
+import useMode from "@/context/useMode";
 import {
     Sidebar,
     SidebarContent,
@@ -26,6 +27,8 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { CiSun } from "react-icons/ci";
+import { CiCloudMoon } from "react-icons/ci";
 
 const data = {
     user: {
@@ -97,13 +100,16 @@ const data = {
 };
 import AxionIcon from "@/assets/Axion Icon.svg?react";
 import { Link } from "react-router-dom";
-
+// import { useIsMobile } from "@/hooks/use-mobile";
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-    return (
+    // const isMobile = useIsMobile();
+	const mode = useMode(state => state.mode);
+	const toggleMode = useMode(state => state.toggleMode);
+	return (
         <Sidebar collapsible="offcanvas" {...props}>
             <SidebarHeader>
                 <SidebarMenu>
-                    <SidebarMenuItem>
+                    <SidebarMenuItem className="flex flex-row items-center">
                         <SidebarMenuButton
                             asChild
                             className="data-[slot=sidebar-menu-button]:p-1."
@@ -118,6 +124,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                                 </span>
                             </Link>
                         </SidebarMenuButton>
+						<div className="w-20 flex justify-center items-center">
+							{mode === "light" ? <CiSun className="text-foreground size-8" onClick={toggleMode}/> : <CiCloudMoon className="text-foreground size-8" onClick={toggleMode}/>}
+						</div>
                     </SidebarMenuItem>
                 </SidebarMenu>
             </SidebarHeader>
