@@ -7,13 +7,11 @@ import LoginPage from "@/pages/login";
 import SignUpPage from "@/pages/signup";
 import DefaultLayout from "@/layout/_layout";
 import DashboardLayout from "@/layout/_dashboardLayout";
-import DeploymentPage from "@/pages/deployment";
-import SettingsPage from "@/pages/settings";
 import ProductsGidPage from "@/pages/products.gid";
 import ProductsCpanelPage from "@/pages/products.cpanel";
 import ProductsVpsPage from "@/pages/products.vps";
-import PublicOnlyRoute from "@/routing/publicOnlyRoute";
-import ProtectedRoute from "@/routing/protectedRoute";
+// import PublicOnlyRoute from "@/routing/publicOnlyRoute";
+// import ProtectedRoute from "@/routing/protectedRoute";
 import HomePage from "@/pages";
 import DashboardPage from "@/pages/dashboard";
 import "@/components/privateComponent/paginatedTable";
@@ -41,19 +39,17 @@ function App() {
                     <Route path="products/vps" element={<ProductsVpsPage />} />
                 </Route>
                 <Route element={<DefaultLayout />}>
-                    <Route element={<PublicOnlyRoute />}>
+                    {/* <Route element={<PublicOnlyRoute />}> Only if you're plugging Auth */}
                         <Route path="login" element={<LoginPage />} />
                         <Route path="signup" element={<SignUpPage />} />
-                    </Route>
+                    {/* </Route> */}
                 </Route>
 
-                <Route element={<ProtectedRoute />}>
+                {/* <Route element={<ProtectedRoute />}> Only if you're plugging Auth */}
                     <Route path="dashboard" element={<DashboardLayout />}>
                         <Route index element={<DashboardPage />} />
-                        <Route path="deployment" element={<DeploymentPage />} />
-                        <Route path="settings" element={<SettingsPage />} />
                     </Route>
-                </Route>
+                {/* </Route> */}
             </Routes>
         </BrowserRouter>
     );

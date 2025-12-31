@@ -148,12 +148,14 @@ const data = {
     // ],
 };
 import AxionIcon from "@/assets/Axion Icon.svg?react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 export function PublicSidebar({
     ...props
 }: React.ComponentProps<typeof Sidebar>) {
     const { toggleSidebar } = useSidebar();
+	const navigate = useNavigate();
     return (
         <Sidebar collapsible="offcanvas" {...props}>
             <SidebarHeader>
@@ -181,10 +183,14 @@ export function PublicSidebar({
             </SidebarHeader>
             <SidebarContent>
                 <NavMain items={data.navMain} />
-                {/* <NavDocuments items={data.documents} /> */}
-                {/* <NavSecondary items={data.navSecondary} className="mt-auto" /> */}
             </SidebarContent>
-            <SidebarFooter>{/* <NavUser user={data.user} /> */}</SidebarFooter>
+            <SidebarFooter>
+				<Button
+					onClick={() => navigate("/dashboard")}
+				>
+					Go to Dashboard
+				</Button>
+			</SidebarFooter>
         </Sidebar>
     );
 }

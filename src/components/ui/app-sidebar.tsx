@@ -1,11 +1,8 @@
 import * as React from "react";
 import {
-    IconCamera,
     IconChartBar,
     IconDashboard,
     IconDatabase,
-    IconFileAi,
-    IconFileDescription,
     IconFileWord,
     IconFolder,
     IconHelp,
@@ -44,71 +41,23 @@ const data = {
         },
         {
             title: "Deployment",
-            url: "/deployment",
+            url: "#",
             icon: IconListDetails,
         },
         {
             title: "Traffic",
-            url: "/traffic",
+            url: "#",
             icon: IconChartBar,
         },
         {
             title: "Applications",
-            url: "/applications",
+            url: "#",
             icon: IconFolder,
         },
         {
             title: "Team",
             url: "#",
             icon: IconUsers,
-        },
-    ],
-    navClouds: [
-        {
-            title: "Capture",
-            icon: IconCamera,
-            isActive: true,
-            url: "#",
-            items: [
-                {
-                    title: "Active Proposals",
-                    url: "#",
-                },
-                {
-                    title: "Archived",
-                    url: "#",
-                },
-            ],
-        },
-        {
-            title: "Proposal",
-            icon: IconFileDescription,
-            url: "#",
-            items: [
-                {
-                    title: "Active Proposals",
-                    url: "#",
-                },
-                {
-                    title: "Archived",
-                    url: "#",
-                },
-            ],
-        },
-        {
-            title: "Prompts",
-            icon: IconFileAi,
-            url: "#",
-            items: [
-                {
-                    title: "Active Proposals",
-                    url: "#",
-                },
-                {
-                    title: "Archived",
-                    url: "#",
-                },
-            ],
         },
     ],
     navSecondary: [
@@ -150,7 +99,8 @@ import AxionIcon from "@/assets/Axion Icon.svg?react";
 import { Link } from "react-router-dom";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-    return (
+
+	return (
         <Sidebar collapsible="offcanvas" {...props}>
             <SidebarHeader>
                 <SidebarMenu>
@@ -161,6 +111,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                         >
                             <Link
                                 to="/"
+								
                                 className="flex h-10 flex-row items-center"
                             >
                                 <AxionIcon className="text-foreground size-16" />

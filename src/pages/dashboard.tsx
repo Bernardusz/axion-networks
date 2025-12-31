@@ -96,6 +96,7 @@ const DashboardPage = () => {
                                 changePage={changePage}
                                 action={
                                     <ComboBox<"GID-cPanel" | "VPS">
+										className="w-40 xl:w-50"
                                         state={tab}
                                         setState={setTab}
                                         choices={choices}

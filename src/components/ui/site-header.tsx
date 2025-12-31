@@ -5,17 +5,18 @@ import { useLocation, useNavigate } from "react-router-dom";
 import AxionLogo from "@/assets/Axion Icon.svg?react";
 
 const SiteHeader = () => {
-    let location = useLocation().pathname;
-    location = location.replace("/", "");
-    const navigate = useNavigate();
+    const location = useLocation().pathname;
+    const arrayLocation = location.split("/");
+	const headerText = arrayLocation.at(-1) ?? ""
+	const navigate = useNavigate();
     return (
         <header className="flex h-(--header-height) shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-(--header-height)">
             <div className="flex w-full items-center gap-1 px-8 lg:gap-2 lg:px-6">
-                {location === "" ? (
-                    <AxionLogo className="w-10" onClick={() => navigate("/")} />
+                {location === "/" ? (
+                    <AxionLogo className="size-8" onClick={() => navigate("/")} />
                 ) : (
                     <p>
-                        {location.charAt(0).toUpperCase() + location.slice(1)}
+                        {headerText?.charAt(0).toUpperCase() + headerText?.slice(1)}
                     </p>
                 )}
                 <div className="ml-auto flex items-center gap-2">

@@ -28,12 +28,14 @@ interface comboBoxProps<T extends string> {
     choices: choicesType[];
     setState: React.Dispatch<React.SetStateAction<T>>;
     state: T;
+	className?: string
 }
 
 const ComboBox = <T extends string>({
     choices,
     setState,
     state,
+	className
 }: comboBoxProps<T>) => {
     const [open, setOpen] = React.useState(false);
     //   const [value, setValue] = React.useState("")
@@ -45,7 +47,7 @@ const ComboBox = <T extends string>({
                     variant="outline"
                     role="combobox"
                     aria-expanded={open}
-                    className="w-40 justify-between xl:w-50"
+                    className={`justify-between ${className}`}
                 >
                     {state
                         ? choices.find(choice => choice.value === state)?.label
@@ -53,7 +55,7 @@ const ComboBox = <T extends string>({
                     <ChevronsUpDown className="opacity-50" />
                 </Button>
             </PopoverTrigger>
-            <PopoverContent className="w-50 p-0">
+            <PopoverContent className={`p-0 ${className}`}>
                 <Command>
                     <CommandInput
                         placeholder="Search framework..."

@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className="flex w-full flex-col gap-4 p-12">
             <div className="flex h-fit w-full flex-col gap-6 xl:flex-row">
-                <div className="flex w-1/2 flex-col gap-2">
+                <div className="flex xl:w-1/2 flex-col gap-2">
                     <div className="flex flex-row items-center justify-start gap-2">
                         <AxionLogo className="aspect-square size-10" />
                         <h4>Axion Networks</h4>
@@ -82,7 +82,7 @@ const Footer = () => {
                 <div></div>
             </div>
             <hr className="p w-full" />
-            <div className="w-full">
+            <div className="w-full h-16">
                 <p>Credit by Bernardusz, 2025</p>
             </div>
         </div>

@@ -4,6 +4,7 @@ import { AppSidebar } from "@/components/ui/app-sidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { useIsMobile } from "@/hooks/use-mobile";
 import SiteHeader from "@/components/ui/site-header";
+import Footer from "@/components/staticComponent/footer";
 
 const DashboardLayout = () => {
     const isMobile = useIsMobile();
@@ -23,6 +24,8 @@ const DashboardLayout = () => {
                 <main>
                     <Outlet />
                 </main>
+            	<Footer />
+
             </SidebarInset>
         </SidebarProvider>
     );

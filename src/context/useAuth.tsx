@@ -16,8 +16,8 @@ type authState = {
 
 const useAuth = create<authState>()((set, get) => ({
     isInitialized: true,
-    accessToken: "Something",
-    refreshToken: "Something here fir testing",
+    accessToken: null,
+    refreshToken: null,
     mode: "session",
 
     setAuth: ({ accessToken, refreshToken, mode }) => {
