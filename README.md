@@ -1,3 +1,111 @@
+# Axion Networks (Mock SaaS – VPS & Deployment Platform)
+> ⚡ Axion Networks is a **portfolio project** built to showcase modern dashboard design, SaaS UX, and deployment thinking — not a real VPS platform.
+
+**Type:** Mock SaaS
+
+**Purpose:** Portfolio project to showcase system design, dashboard thinking, pricing, and infrastructure UX
+
+---
+
+## 🛠 Stack
+
+* **Frontend:** React.js + Vite
+* **UI Components:** shadcn/ui
+* **Styling:** TailwindCSS
+* **SEO / Meta:** Unhead
+
+---
+
+## 🖋 Typography
+
+* **Inter** (used across headings & body for consistent branding)
+
+---
+
+## 🎨 Color Palette
+
+**Dark Mode**
+
+| Element          | HSL         |
+| ---------------- | ----------- |
+| Background       | 200, 10, 5  |
+| Shade 1          | 200, 10, 10 |
+| Shade 2          | 200, 10, 15 |
+| Text             | 200, 10, 90 |
+| Text Deemphasize | 200, 10, 75 |
+
+**Light Mode**
+
+| Element          | HSL         |
+| ---------------- | ----------- |
+| Background       | 200, 10, 95 |
+| Shade 1          | 200, 10, 90 |
+| Shade 2          | 200, 10, 85 |
+| Text             | 200, 10, 10 |
+| Text Deemphasize | 200, 10, 25 |
+
+**Primary / Secondary Colors**
+
+| Color     | HSL         |
+| --------- | ----------- |
+| Primary   | 200, 70, 50 |
+| Secondary | 230, 70, 50 |
+
+---
+
+## 🗂 Core Pages
+
+* `/` – Landing page
+* `/products` – Deployment methods overview
+* `/products/:type` – Deep dive into each deployment type
+* `/pricing` – Pricing tiers
+* `/dashboard` – User dashboard
+
+---
+
+## 🚀 Deployment Types (Mock)
+
+* **Git Integrated Deployment (GID)** – Quick, commit-based deployments
+* **cPanel** – Managed, no root access, balance control & ease-of-use
+* **Linux VPS** – Full root access, complete server control
+
+---
+
+## 💰 Pricing (Mock)
+
+| Plan         | Monthly | Yearly   |
+| ------------ | ------- | -------- |
+| Beginner     | $8      | $6 x 12  |
+| Professional | $25     | $20 x 12 |
+| Advanced     | $60     | $55 x 12 |
+| Enterprise   | Custom  | –        |
+
+---
+
+## 📊 Dashboard Features (Mock)
+
+* VPS status (Active / Inactive)
+* List of active apps
+* Traffic overview (placeholder chart)
+* Resource usage metrics: CPU, RAM, Bandwidth
+
+---
+## 🏃 Getting Started
+1. Clone repo
+2. Install dependencies: `pnpm install`
+3. Start dev server: `pnpm run dev`
+4. Open browser at `http://localhost:5173`
+
+---
+
+## ⚡ Notes
+
+* This project is **mock SaaS for portfolio purposes only**.
+* Illustrates **full-stack thinking**, **dashboard design**, **pricing UX**, and **deployment flow**.
+* Built to **showcase UI/UX skills** rather than operate as a live VPS service.
+
+---
+
 ## Credit:
 
 <a href="https://www.freepik.com/free-photo/cloud-storage-background-remixed-from-public-domain-by-nasa_15606925.htm">Image by [rawpixel.com](http://rawpixel.com/) on Freepik</a>
@@ -27,5 +135,3 @@ Photo by [Matthieu Beaumont](https://unsplash.com/@matthieu_cabri?utm_source=uns
 Photo by [Florian Krumm](https://unsplash.com/@floriankrumm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/a-close-up-of-a-computer-motherboard-with-wires-yLDabpoCL3s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 Photo by [Massimo Botturi](https://unsplash.com/@wildmax?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/electronic-wire-lot-zFYUsLk_50Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-
-> This is only temporary, later I'll add a dedicated credit page
