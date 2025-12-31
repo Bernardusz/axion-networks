@@ -109,7 +109,13 @@ const Footer = () => {
                     </div>
                     <div></div>
                 </div>
-            </div>
+				<div className="mt-8 border-t pt-8 text-center md:text-left">
+					<p>
+						© 2025 Axion Networks • <Link to="/credits" className="link-primary">Image Credits</Link>
+					</p>
+				</div>
+			</div>
+			
         </footer>
     );
 };

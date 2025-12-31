@@ -71,17 +71,17 @@ export function PublicSidebar({
 }: React.ComponentProps<typeof Sidebar>) {
     const { toggleSidebar } = useSidebar();
     const navigate = useNavigate();
-    const { mode, toggleMode } = useMode();
+	const {mode, toggleMode} = useMode();
     return (
         <Sidebar collapsible="offcanvas" {...props}>
             <SidebarHeader>
                 <SidebarMenu>
                     <SidebarMenuItem className="flex flex-row">
                         <SidebarMenuButton
-                            size="default"
+							size="default"
                             asChild
                             variant="default"
-                            className="flex flex-col data-[slot=sidebar-menu-button]:p-1"
+                            className="data-[slot=sidebar-menu-button]:p-1 flex flex-col"
                         >
                             <Link
                                 to="/"
@@ -94,19 +94,9 @@ export function PublicSidebar({
                                 </span>
                             </Link>
                         </SidebarMenuButton>
-                        <div className="flex w-20 items-center justify-center">
-                            {mode === "light" ? (
-                                <CiSun
-                                    className="text-foreground size-8"
-                                    onClick={toggleMode}
-                                />
-                            ) : (
-                                <CiCloudMoon
-                                    className="text-foreground size-8"
-                                    onClick={toggleMode}
-                                />
-                            )}
-                        </div>
+						<div className="w-20 flex justify-center items-center">
+							{mode === "light" ? <CiSun className="text-foreground size-8" onClick={toggleMode}/> : <CiCloudMoon className="text-foreground size-8" onClick={toggleMode}/>}
+						</div>
                     </SidebarMenuItem>
                 </SidebarMenu>
             </SidebarHeader>
@@ -114,7 +104,7 @@ export function PublicSidebar({
                 <NavMain items={data.navMain} />
             </SidebarContent>
             <SidebarFooter>
-                <Button className="mb-8" onClick={() => navigate("/dashboard")}>
+                <Button className="mb-8" onClick={() => navigate("/dashboard") }>
                     Go to Dashboard
                 </Button>
             </SidebarFooter>

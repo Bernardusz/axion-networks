@@ -154,7 +154,7 @@
     }
 
     .link-primary {
-        @apply text-primary hover:text-primary/90 text-xl font-normal;
+        @apply text-primary hover:text-primary/90 font-normal;
     }
 
     .btn-primary {

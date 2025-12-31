@@ -15,6 +15,7 @@ import ProductsVpsPage from "@/pages/products.vps";
 import HomePage from "@/pages";
 import DashboardPage from "@/pages/dashboard";
 import "@/components/privateComponent/paginatedTable";
+import CreditsPage from "@/pages/credits";
 
 function App() {
     const isInitialized = useMode(state => state.isInitialized);
@@ -37,6 +38,7 @@ function App() {
                         element={<ProductsCpanelPage />}
                     />
                     <Route path="products/vps" element={<ProductsVpsPage />} />
+                    <Route path="/credits" element={<CreditsPage />} />
                 </Route>
                 <Route element={<DefaultLayout />}>
                     {/* <Route element={<PublicOnlyRoute />}> Only if you're plugging Auth */}
